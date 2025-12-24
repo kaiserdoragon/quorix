@@ -1601,23 +1601,18 @@ add_action('wp_ajax_nopriv_get_faq_items', 'ajax_get_faq_items');
   // CSSは基本的にこっち
   function allsite_style_script()
   {
-
     if (is_page('ikkatu')) {
-      //テーマ情報css
-      // wp_register_style('theme', get_template_directory_uri() . '/style.css', array());
-      // wp_enqueue_style('theme');
+      $theme_uri = get_template_directory_uri();
+      $version = '6.9'; // キャッシュ対策用のバージョン
 
-      //リセットcss
-      wp_register_style('reset', get_template_directory_uri() . '/css/reset.css', array());
-      wp_enqueue_style('reset');
-
-      //カスタムcss
-      wp_register_style('custom', get_template_directory_uri() . '/css/customstyle.css', array());
-      wp_enqueue_style('custom');
+      // 直接linkタグを出力することで、WP標準の出力順序を無視して最後に配置します
+      echo '<link rel="stylesheet" id="reset-css" href="' . $theme_uri . '/css/reset.css?ver=' . $version . '" media="all" />' . "\n";
+      echo '<link rel="stylesheet" id="custom-css" href="' . $theme_uri . '/css/customstyle.css?ver=' . $version . '" media="all" />' . "\n";
     }
   }
 
-  add_action('wp_enqueue_scripts', 'allsite_style_script');
+  // 優先度を 999 に設定して wp_head の最後に差し込む
+  add_action('wp_head', 'allsite_style_script', 999);
 
 
   // フロント側のみに呼び出すCSSとJavaScript
