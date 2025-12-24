@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "npm-run-all -p sass postcss",
-    "dev-sass": "sass ./scss/style.scss:./css/custom_style.css ./scss/reset.scss:./css/reset.css --no-source-map --style expanded --watch",
+    "dev-sass": "sass ./scss/style.scss:./css/customstyle.css ./scss/reset.scss:./css/reset.css --no-source-map --style expanded --watch",
     "pro-sass": "sass ./scss/style.scss:./css/style.css ./scss/reset.scss:./css/reset.css --no-source-map --style compressed --watch",
     "postcss": "postcss --use autoprefixer --no-map  ./css/style.min.css -o ./css/style.min.css --watch",
     "howto": " コンパイル時にベンダープレフィクスを付与できます「npm run watch」 | sassのコンパイルのみを行います「npm run sass」| ベンダープレフィックスを付与します「npm run postcss」",

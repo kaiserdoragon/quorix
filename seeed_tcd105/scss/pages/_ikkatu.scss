@@ -1,0 +1,17 @@
+@charset "UTF-8";
+@use "../variables" as *;
+
+// ---------------------------------------------
+//  エアコン一括見積LP専用
+// ---------------------------------------------
+
+#header,
+#footer_contact,
+#footer,
+#copyright {
+  display: none;
+}
+
+#container {
+  margin-top: 0;
+}
