@@ -1,0 +1,77 @@
+i.mce-ico.mce-i-tcd-chart {
+	font: normal 20px/1 dashicons;
+	line-height: 1;
+	padding: 0;
+	vertical-align: top;
+	speak: never;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin-left: -2px;
+	padding-right: 2px;
+}
+
+i.mce-ico.mce-i-tcd-chart::before {
+	content: "\f184";
+}
+
+#tcd-chart-select.mce-selectbox {
+	box-sizing: border-box;
+	min-width: 300px;
+	color: #595959;
+}
+
+/* choices用に調整 */
+#tcd-chart-select {
+	box-sizing: border-box;
+	height: 44px;
+	min-width: 270px;
+	width: 40vw;
+	border: 1px solid #ddd;
+}
+
+/* wpデフォルトや.mce-container * で上書きされる箇所を再指定 */
+#tcd-chart-dialog-body .choices * {
+	box-sizing: border-box;
+}
+
+#tcd-chart-dialog-body .choices__inner {
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	border-radius: 2.5px;
+	font-size: 14px;
+	height: 44px;
+	padding: 7.5px 7.5px 3.75px;
+	width: 100%;
+}
+
+#tcd-chart-dialog-body .choices__input {
+	background-color: #f9f9f9;
+	padding: 0 10px;
+	height: 44px;
+	border-color: #ddd;
+	border-radius: 0;
+	border-style: solid;
+	border-width: 0 0 1px;
+}
+
+#tcd-chart-dialog-body .choices__input:focus {
+	border-color: #ddd;
+	border-radius: 0;
+	border-style: solid;
+	border-width: 0 0 1px;
+	box-shadow: none;
+	outline: none;
+}
+
+#tcd-chart-dialog-body .choices__list--single {
+	display: inline-block;
+	padding: 4px 16px 4px 4px;
+	width: 100%;
+}
+
+#tcd-chart-dialog-body .choices__item {
+	overflow: hidden;
+	padding-right: 10px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

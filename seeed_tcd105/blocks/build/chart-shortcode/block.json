@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "tcd/chart-shortcode",
+	"version": "1.0.2",
+	"title": "Chart",
+	"textdomain": "tcd-seeed",
+	"icon": "chart-pie",
+	"category": "tcd",
+	"attributes": {
+		"chart_id": {
+			"type": "number",
+			"default": 0
+		},
+		"forcePreviewUrl": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"html": false
+	},
+	"editorScript": "file:editor.js"
+}

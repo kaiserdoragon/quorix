@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+.tcd-image-editor { display: none; position: relative; }
+.tcd-image-editor .media-frame-content { padding: 16px; }
+
+.tcd-image-editor.is-ajaxing .media-toolbar .spinner { margin-top: 20px; visibility: visible; }
+.tcd-image-editor__loading { background: rgba(255, 255, 255, 0.5); display: none; position: absolute; bottom: 0;left: 0; right: 0; top: 0; }
+.tcd-image-editor.is-ajaxing .tcd-image-editor__loading { display: block; }
+.tcd-image-editor__loading .spinner { margin: auto; visibility: visible; opacity: 0.6; position: absolute; bottom: 0;left: 0; right: 0; top: 0; }
+
+.tcd-image-editor .media-toolbar-messege { color: #999; margin-top: 20px; -webkit-animation:blink 1s ease-in-out infinite alternate; animation: blink 1s ease-in-out infinite alternate; }
+@-webkit-keyframes blink{
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes blink{
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.tcd-image-editor h2 { border-left: 4px solid #bbb; margin-top: 50px; padding-left: 10px; }
+.tcd-image-editor__imgedit-headline { float: left; margin-right: 20px; margin-top: 5px !important; }
+.tcd-image-editor__image { display: block; height: auto; max-width:650px; margin:auto; }
+
+.tcd-image-editor__filters { width: 100%; }
+.tcd-image-editor__filters th { vertical-align: middle; }
+.tcd-image-editor__filters td { padding: 7px 0; vertical-align: middle; }
+.tcd-image-editor__filter-input__decrease, .tcd-image-editor__filter-input__increase { background: transparent; border: none; cursor: pointer; font-size: 1.3em; outline: 0; padding: 0 5px; }
+.tcd-image-editor__filter-input__decrease:disabled, .tcd-image-editor__filter-input__increase:disabled { cursor: default; }
+.tcd-image-editor__filter-value { display: inline-block; text-align: center; width: 32px; }
+.tcd-image-editor__filters .tcd-image-editor__filter-input { -webkit-appearance: none; appearance: none; cursor: pointer; padding: 0; vertical-align: middle; width: 80%; width: calc(100% - 78px); }
+.tcd-image-editor__filters .tcd-image-editor__filter-input:focus { outline: none; }
+.tcd-image-editor__filters .tcd-image-editor__filter-input:disabled { cursor: default; opacity: 0.5; }
+.tcd-image-editor__filters .tcd-image-editor__filter-input::-webkit-slider-runnable-track { background: #ddd; border: none; border-radius: 3px; height: 3px; }
+.tcd-image-editor__filters .tcd-image-editor__filter-input::-webkit-slider-thumb { -webkit-appearance: none; background: #008ec2; border: 0.5px solid #006799; border-radius: 16px; height: 16px; margin-top: -6.5px; width: 16px; }
+.tcd-image-editor__filters .tcd-image-editor__filter-input::-webkit-slider-runnable-track { background: #e5e5e5; }
+.tcd-image-editor__filters .tcd-image-editor__filter-input::-moz-range-track { background: #ddd; border: none; height: 3px; }
+.tcd-image-editor__filters .tcd-image-editor__filter-input::-moz-range-thumb { background: #008ec2; border: 0.5px solid #006799; border-radius: 16px; height: 16px; width: 16px; }
+.tcd-image-editor__filters .tcd-image-editor__filter-input::-ms-track { background: transparent; border-color: transparent; border-width: 6.5px 0; color: transparent; height: 3px; }
+.tcd-image-editor__filters .tcd-image-editor__filter-input::-ms-fill-lower { background: #d5d5d5; border: none; }
+.tcd-image-editor__filters .tcd-image-editor__filter-input::-ms-fill-upper { background: #dddddd; border: none; }
+.tcd-image-editor__filters .tcd-image-editor__filter-input::-ms-thumb { background: #008ec2; border: 0.5px solid #006799; border-radius: 16px; height: 16px; width: 16px; }
+.tcd-image-editor__filters .tcd-image-editor__filter-input:focus::-ms-fill-lower { background: #dddddd; }
+.tcd-image-editor__filters .tcd-image-editor__filter-input:focus::-ms-fill-upper { background: #e5e5e5; }
+
+@media (min-width: 783px) {
+	.tcd-image-editor__filters { table-layout: fixed; }
+	.tcd-image-editor__filters th { width: 6em; }
+}
+
+@media screen and (max-width: 782px) {
+	.tcd-image-editor__filters-headline { margin-bottom: 0 !important; }
+	.tcd-image-editor__filters,
+	.tcd-image-editor__filters tbody,
+	.tcd-image-editor__filters tr,
+	.tcd-image-editor__filters th,
+	.tcd-image-editor__filters td { display: block; padding: 3px 0; width: 100%; }
+	.tcd-image-editor__filters th { padding: 20px 0 0; text-align: left; }
+}
