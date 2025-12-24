@@ -1626,9 +1626,12 @@ add_action('wp_ajax_nopriv_get_faq_items', 'ajax_get_faq_items');
   {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-      //テーマ用のjsファイルを読み込み
-      wp_register_script('mainscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'));
-      wp_enqueue_script('mainscripts');
+      if (is_page('ikkatu')) {
+        //テーマ用のjsファイルを読み込み
+        wp_register_script('mainscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'));
+        wp_enqueue_script('mainscripts');
+      }
+
 
       // ページ専用jsの読み込みが必要な時は下記のように使う。
       // wp_register_script('scriptname', get_template_directory_uri().'/js/scriptname.js', array('jquery'));
