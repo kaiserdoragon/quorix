@@ -287,6 +287,73 @@ table {
   font-weight: bold;
 }
 
+.ttl {
+  width: fit-content;
+  padding: 0 40px 5px;
+  margin: 0 auto 60px;
+  font-size: var(--fz45);
+  font-weight: 900;
+  color: #1352c3;
+  border-bottom: 1px solid #1352c3;
+}
+@media (max-width: 767px) {
+  .ttl {
+    padding: 0 20px 5px;
+    margin: 0 auto 40px;
+    font-size: var(--fz30);
+    text-align: center;
+  }
+}
+
+.sec {
+  padding: 120px 0;
+}
+.sec.-md {
+  padding: 100px 0;
+}
+.sec.-sm {
+  padding: 80px 0;
+}
+@media (max-width: 767px) {
+  .sec {
+    padding: 80px 0;
+  }
+}
+
+.bg_blue {
+  background: #00479d;
+}
+
+.bg_skyblue {
+  background: #effeff;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1111111111;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.25);
+  transition: none;
+  transform: translateY(-100%);
+  will-change: transform;
+}
+.fixed-header.is-ready {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+  transition-property: transform;
+}
+.fixed-header.is-visible.is-ready {
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  transition-duration: 640ms;
+  transform: translateY(0);
+}
+
 .cv_button {
   position: relative;
   display: inline-block;
@@ -456,32 +523,6 @@ main {
   }
 }
 
-.fixed-header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1111111111;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 10px 20px;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.25);
-  transition: none;
-  transform: translateY(-100%);
-  will-change: transform;
-}
-.fixed-header.is-ready {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 500ms;
-  transition-property: transform;
-}
-.fixed-header.is-visible.is-ready {
-  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-  transition-duration: 640ms;
-  transform: translateY(0);
-}
-
 .footer--copy {
   padding: 10px;
   line-height: 1;
@@ -498,6 +539,114 @@ main {
 
 #container {
   margin-top: 0;
+}
+
+.region img {
+  display: block;
+  margin: 0 auto 60px;
+}
+.region dl div {
+  padding: 40px 30px;
+  border: 4px solid #004ba6;
+  box-shadow: 6.293px 7.771px 25px 0 rgba(0, 42, 93, 0.4);
+}
+.region dl div:not(:last-child) {
+  margin-bottom: 40px;
+}
+.region dt {
+  position: relative;
+  width: 200px;
+  padding: 8px 0;
+  padding-left: 15px;
+  margin: 0 auto 15px;
+  font-size: var(--fz23);
+  color: #fff;
+  text-align: center;
+  background: #007bf8;
+  border-radius: 1000px;
+}
+.region dt::before {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  width: 18px;
+  height: 26px;
+  content: "";
+  background: url(../../cleaninglp/img/icon_map.png) no-repeat center center/contain;
+  transform: translateY(-50%);
+}
+.region dd {
+  line-height: 1.8;
+}
+@media (max-width: 767px) {
+  .region dl div {
+    padding: 30px;
+  }
+  .region dt {
+    width: 160px;
+    margin: 0 auto 15px;
+    font-size: var(--fz20);
+  }
+}
+
+.faq dt {
+  padding: 30px;
+  font-size: var(--fz20);
+  font-weight: 800;
+  color: #fff;
+  background: #007bf8;
+}
+.faq dt::before {
+  font-size: var(--fz23);
+  content: "Q.";
+}
+.faq dd {
+  padding: 30px 30px 30px 70px;
+  text-indent: -23px;
+  background: #fff;
+}
+.faq dd::before {
+  font-size: var(--fz20);
+  content: "A.";
+}
+.faq dl div:nth-of-type(4) ul {
+  margin-top: 10px;
+  line-height: 1.8;
+  text-indent: 0;
+}
+.faq div:not(:last-of-type) {
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .faq dt {
+    padding: 15px;
+    padding-left: 35px;
+    font-size: var(--fz20);
+    text-indent: -20px;
+  }
+  .faq dt::before {
+    font-size: var(--fz20);
+  }
+  .faq dd {
+    padding: 20px 20px 20px 30px;
+    text-indent: -15px;
+  }
+}
+
+.contact p {
+  margin-bottom: 30px;
+  font-size: var(--fz20);
+  font-weight: 600;
+  text-align: center;
+}
+.contact .thanks--tel {
+  margin: 0 auto 60px;
+}
+@media (max-width: 767px) {
+  .contact p {
+    margin-bottom: 60px;
+    font-size: var(--fz16);
+  }
 }
 
 .snow-monkey-form {

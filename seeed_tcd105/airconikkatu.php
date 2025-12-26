@@ -131,315 +131,46 @@ get_header();
 
 <main>
   <div class="mv">
-    <picture>
-      <source
-        media="(max-width: 767px)"
-        srcset="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/mv_sp.avif"
-        type="image/avif">
-      <source
-        media="(max-width: 767px)"
-        srcset="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/mv_sp.webp"
-        type="image/webp">
-      <source
-        media="(max-width: 767px)"
-        srcset="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/mv_sp.jpg">
 
-      <source
-        srcset="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/mv.avif"
-        type="image/avif">
-      <source
-        srcset="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/mv.webp"
-        type="image/webp">
-
-      <img
-        src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/mv.jpg"
-        alt="エアコンクリーニングなら株式会社トータルスマート"
-        width="1920" height="800"
-        fetchpriority="high"
-        loading="eager"
-        decoding="async">
-    </picture>
   </div>
-
-  <section class="catch sec -sm">
+  <section class="flow sec">
     <div class="contents">
-      <h2>業界最安値に<br class="is-hidden_pc">挑戦</h2>
-      <div class="catch--inner">
-        <div class="catch--item">
-          <span>家庭用エアコン</span>
-          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/catch_01.jpg" alt="家庭用エアコン" width="430" height="271" decoding="async">
-          <div class="catch--price">
-            <p>8<span class="catch--period">,</span>000</p><span class="catch--unit"><span class="catch--jpy">円～</span><span class="catch--tax">（税込）</span></span>
-          </div>
-        </div>
-        <div class="catch--item">
-          <span>業務用エアコン</span>
-          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/catch_02.jpg" alt="業務用エアコン" width="430" height="271" decoding="async">
-          <div class="catch--price">
-            <p>18<span class="catch--period">,</span>000</p><span class="catch--unit"><span class="catch--jpy">円～</span><span class="catch--tax">（税込）</span></span>
-          </div>
-        </div>
-      </div>
-      <p class="catch--txt">エアコンのクリーニングは<br class="is-hidden_pc">全てお任せ下さい。</p>
-      <p>エアコンの専門の技術スタッフが、<br class="is-hidden_sp">
-        エアコンの悩みを解消します！</p>
-    </div>
-  </section>
-
-  <section class="lead sec -sm bg_blue">
-    <div class="contents -md">
-      <h2>
-        <picture>
-          <source media="(max-width: 767px)" srcset="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/lead_txt_sp.png">
-          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/lead_txt.png" alt="愛知県・岐阜県・三重県・静岡県なら最短当日・即日での訪問も可能です。" width="621" height="114" decoding="async">
-        </picture>
-      </h2>
-      <div class="lead--inner">
-        <h3>エアコンクリーニングのご予約・ご相談はこちら</h3>
-        <div class="lead--txt">
-          <p>
-            <span>汚れ・カビ・ニオイ・効きの悪さ</span>が気になったら、<br class="is-hidden_sp">
-            まずはお電話でお気軽にご相談ください。
-          </p>
-          <div class="header--btns">
-            <div class="header--btn-item">
-              <a href="tel:052-932-5450" class="cv_button">
-                <picture>
-                  <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/tel.avif" type="image/avif">
-                  <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/tel.webp" type="image/webp">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/tel.png" alt="お電話でのご相談はこちら: 052-932-5450" width="355" height="90" decoding="async">
-                </picture>
-              </a>
-            </div>
-            <div class="header--btn-item">
-              <a href="#contact" class="cv_button">
-                <picture>
-                  <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/mail.avif" type="image/avif">
-                  <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/mail.webp" type="image/webp">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/mail.png" alt="メールでお問い合わせ" width="355" height="90" decoding="async">
-                </picture>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <p class="lead--supplement">
-        まずはお電話にて事前に概算のお見積りをご案内いたします。<br>
-        不当な追加料金や高額請求は一切ございませんので、安心してお問い合わせください。
-      </p>
-      <p class="lead--supplement -sm">
-        ※設置状況（機種・汚れ具合・作業環境）により、<br class="is-hidden_sp">
-        当日ご案内する金額が事前の概算見積りから変動する場合がございます。
-      </p>
-    </div>
-  </section>
-
-  <section class="sign bg_skyblue">
-    <div class="contents">
-      <span class="sign--catch">こんなサインが出てきたら</span>
-      <h2><span>エアコンクリーニング</span><br class="is-hidden_pc">のタイミングです</h2>
-      <ul class="sign--list">
-        <li><span>吹き出し口の黒い点々やホコリの塊</span>が目につくようになってきた</li>
-        <li>スイッチを入れると、<span>カビっぽいニオイ・ホコリっぽさを感じる</span></li>
-        <li><span>冷房／暖房の効きが前より悪くなった</span>気がして、設定温度を下げがち</li>
-        <li>フィルター掃除はしているのに、<span>電気代の明細が年々高くなっている</span></li>
-        <li>小さなお子さまやペットがいて、<span>エアコンの風やお部屋の空気が少し心配</span></li>
-        <li><span>高い場所の作業や分解が不安</span>で、自分で中まで掃除するのは難しいと感じている</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="cvarea bg_blue">
-    <div class="contents">
-      <picture>
-        <source media="(max-width: 767px)" srcset="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/cvarea_sp.png">
-        <img class="cvarea--bg" src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/cvarea.png" alt="エアコンクリーニングならトータルスマートにお任せください" width="1366" height="618" decoding="async">
-      </picture>
-      <div class="header--btns">
-        <div class="header--btn-item">
-          <a href="tel:052-932-5450" class="cv_button">
-            <picture>
-              <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/tel.avif" type="image/avif">
-              <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/tel.webp" type="image/webp">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/tel.png"
-                alt="お電話でのご相談はこちら: 052-932-5450"
-                width="355" height="90"
-                decoding="async">
-            </picture>
-          </a>
-        </div>
-        <div class="header--btn-item">
-          <a href="#contact" class="cv_button">
-            <picture>
-              <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/mail.avif" type="image/avif">
-              <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/mail.webp" type="image/webp">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/mail.png"
-                alt="メールでお問い合わせ"
-                width="355" height="90"
-                decoding="async">
-            </picture>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="price sec">
-    <div class="contents">
-      <span class="sign--catch">他社との比較でわかる！</span>
-      <h2>
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/select_logo.png" alt="株式会社トータルスマート" width="401" height="44" decoding="async">の<br>圧倒的なコスパ
-      </h2>
-      <div class="price--img js-scrollable">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/price.png" alt="エアコンクリーニングの比較料金表" width="1509" height="834">
-      </div>
-    </div>
-  </section>
-
-  <section class="merit sec bg_skyblue">
-    <div class="contents -md">
-      <h2>エアコンクリーニングをする<br><span>5</span>つのメリット</h2>
-      <ul>
-        <li>
-          <p>不具合の<br>早期発見</p>
-          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/merit_01.jpg" alt="" width="300" height="300">
-        </li>
-        <li>
-          <p>大きな故障の<br>防止</p>
-          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/merit_02.jpg" alt="" width="300" height="300">
-        </li>
-        <li>
-          <p>電気代の<br>削減</p>
-          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/merit_03.jpg" alt="" width="300" height="300">
-        </li>
-        <li>
-          <p>エアコンの<br>寿命UP</p>
-          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/merit_04.jpg" alt="" width="300" height="300">
-        </li>
-        <li>
-          <p>エアコンの<br>機能安定</p>
-          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/merit_05.jpg" alt="" width="300" height="300">
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="select sec">
-    <div class="contents">
-      <h2>
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/select_logo.png" alt="株式会社トータルスマート" width="401" height="44" decoding="async">が<br>選ばれる<span>4</span>つの理由
-      </h2>
-
+      <h2>ご利用の流れ<span>かんたん3つのステップ</span></h2>
       <ol>
         <li>
-          <h3>
-            確かな技術力・品質
-          </h3>
-          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/select_01.jpg" alt="" width="400" height="250" decoding="async">
-          <p>エアコン本体を分解し、アルミフィン・送風ファン・ドレンパンなど自分では触れない内部まで徹底洗浄します。
-            お掃除機能付きエアコンにも対応しているので、ご自宅の機種も安心してお任せください。</p>
         </li>
         <li>
-          <h3>
-            明確な料金体系
-          </h3>
-          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/select_02.jpg" alt="" width="400" height="250" decoding="async">
-          <p>1台だけのご依頼から、複数台のご依頼まで、台数ごとのお得なセット料金をご用意しています。
-            お掃除機能付きや室外機洗浄など、追加オプションも事前に料金をお伝えするため、当日になって突然金額が増えることはありません。</p>
         </li>
         <li>
-          <h3>
-            スピード対応
-          </h3>
-          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/select_03.jpg" alt="" width="400" height="250" decoding="async">
-          <p>移動時間を含めたスケジュール調整がしやすく、繁忙期を除けば最短当日〜数日以内のご訪問が可能です。</p>
-        </li>
-        <li>
-          <h3>
-            安心・安全への配慮
-          </h3>
-          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/select_04.jpg" alt="" width="400" height="250" decoding="async">
-          <p>作業中の思わぬトラブルにも備え、損害賠償保険に加入しています。
-            室内はビニールシートでしっかり養生し、壁や床・家具に水や汚れが飛び散らないよう配慮して作業します。</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <section class="case sec -sm">
+  <section class="">
     <div class="contents">
-      <span class="sign--catch">エアコンクリーニングするとここまできれいになります</span>
-      <h2 class="ttl">施工事例</h2>
-      <div class="case--item">
-        <h3>まさか、この空気を吸っていたなんて…</h3>
-        <div class="case--inner">
-          <p>長年蓄積されたホコリと汚れで、フィルターが完全に目詰まりしていました。<br>
-            「最近、風がカビ臭い」「効きが悪い」と感じたら、<br class="is-hidden_sp">
-            内部はもっと汚れているサインかもしれません。<br>
-            プロの分解洗浄なら、ご家庭では落としきれない汚れもスッキリ除去。<br>
-            アレルギー対策や、小さなお子様のいるご家庭にもおすすめです。</p>
-          <div class="case--comparison">
-            <div class="case--before">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/case_02.jpg" alt="エアコンクリーニングの前の画像" width="380" height="400" decoding="async">
-              <p>BEFORE</p>
-            </div>
-            <div class="case--after">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/case_01.jpg" alt="エアコンクリーニングの後の画像" width="380" height="400" decoding="async">
-              <p>AFTER</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="case--item">
-        <h3>その黒ずみ、お客様に見られています。</h3>
-        <div class="case--inner">
-          <p>
-            エアコンの吹き出し口が黒く汚れていませんか？<br>
-            それはホコリとカビが結合した頑固な汚れです。<br>
-            大切なお客様に「不潔」な印象を与えかねません。<br>
-            プロの技術でパーツを分解・洗浄すれば、見違えるような白さと清潔さが復活。<br>
-            「空気が澄んで、お店が明るくなった！」と、オーナー様からも好評です。
-          </p>
-          <div class="case--comparison">
-            <div class="case--before">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/case_03.jpg" alt="エアコンクリーニングの前の画像" width="380" height="400" decoding="async">
-              <p>BEFORE</p>
-            </div>
-            <div class="case--after">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/case_04.jpg" alt="エアコンクリーニングの後の画像" width="380" height="400" decoding="async">
-              <p>AFTER</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="case--item">
-        <h3>黄ばみを一掃してお店の好感度アップ！</h3>
-        <div class="case--inner">
-          <p>
-            吹き出し口の黒カビや、全体的に茶色くくすんだ汚れは、<br class="is-hidden_sp">
-            長年のホコリと油煙が原因です。<br>
-            不潔な印象を与えるだけでなく、嫌なニオイの元凶にもなります。<br>
-            プロの洗浄技術なら、パネルの裏側から徹底クリーニング。<br>
-            お客様が心地よく過ごせる空間へと生まれ変わらせます。<br>
-          </p>
-          <div class="case--comparison">
-            <div class="case--before">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/case_05.jpg" alt="エアコンクリーニングの前の画像" width="380" height="400" decoding="async">
-              <p>BEFORE</p>
-            </div>
-            <div class="case--after">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/case_06.jpg" alt="エアコンクリーニングの後の画像" width="380" height="400" decoding="async">
-              <p>AFTER</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <p>当サービスが全て解決します</p>
+      <p>優良業者のみをご紹介</p>
+      <h2>エアコン業者が<span>最短当日・即日</span>で見つかります</h2>
+      <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
     </div>
   </section>
 
-  <section class="voice sec bg_skyblue">
+  <section class="cvarea bg_blue sec">
     <div class="contents">
-      <h2 class="ttl">お客様からの評価も頂いています</h2>
+      <h2>業務用エアコンの見積りはお任せください。</h2>
+    </div>
+  </section>
+
+  <section class="voice sec">
+    <div class="contents">
+      <h2 class="ttl">導入事例事例</h2>
       <div class="voice--inner">
         <div class="voice--item">
           <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/voice_01.jpg" alt="" width="380" height="200" decoding="async">
@@ -477,79 +208,6 @@ get_header();
         </div>
 
       </div>
-    </div>
-  </section>
-
-  <section class="flow sec">
-    <div class="contents">
-      <h2 class="ttl">エアコンクリーニングの流れ</h2>
-      <ol>
-        <li>
-          <span>
-            STEP1
-          </span>
-          <div>
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/flow_01.jpg" alt="" width="180" height="100" decoding="async">
-            <dl>
-              <dt>エアコンの分解</dt>
-              <dd>パーツを分解して<br class="is-hidden_sp">
-                いきます。</dd>
-            </dl>
-          </div>
-        </li>
-        <li>
-          <span>
-            STEP2
-          </span>
-          <div>
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/flow_02.jpg" alt="" width="180" height="100" decoding="async">
-            <dl>
-              <dt>ホコリ除去</dt>
-              <dd>ホコリや汚れを<br class="is-hidden_sp">
-                除去します。</dd>
-            </dl>
-          </div>
-        </li>
-        <li>
-          <span>
-            STEP3
-          </span>
-          <div>
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/flow_03.jpg" alt="" width="180" height="100" decoding="async">
-            <dl>
-              <dt>エアコン内部洗浄</dt>
-              <dd>高圧洗浄機で<br class="is-hidden_sp">
-                きれいにします。</dd>
-            </dl>
-          </div>
-        </li>
-        <li>
-          <span>
-            STEP4
-          </span>
-          <div>
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/flow_04.jpg" alt="" width="180" height="100" decoding="async">
-            <dl>
-              <dt>パーツの汚れ除去</dt>
-              <dd>分解したパーツも<br class="is-hidden_sp">
-                洗浄します。</dd>
-            </dl>
-          </div>
-        </li>
-        <li>
-          <span>
-            STEP5
-          </span>
-          <div>
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/flow_05.jpg" alt="" width="180" height="100" decoding="async">
-            <dl>
-              <dt>最終確認</dt>
-              <dd>正常に動くかの<br class="is-hidden_sp">
-                最終確認をします。</dd>
-            </dl>
-          </div>
-        </li>
-      </ol>
     </div>
   </section>
 
@@ -757,35 +415,12 @@ get_header();
   <p class="footer_btn_fixed--mail"><a href="#contact">メールで無料見積り</a></p>
 </div>
 
-<footer class="footer">
+<footer class="footer bg_blue">
   <div class="contents -md">
-    <div>
-      <div class="footer--logo">
-        <a href="<?php echo esc_url(home_url('/')); ?>">
-          <picture>
-            <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/logo_footer.avif" type="image/avif">
-            <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/logo_footer.webp" type="image/webp">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/logo_footer.png"
-              alt="株式会社トータルスマート"
-              width="397" height="84"
-              decoding="async">
-          </picture>
-          <p>トータルスマート株式会社は愛知県・岐阜県・三重県・静岡県でオフィスに係ること全てトータルで依頼可能！</p>
-        </a>
-      </div>
-      <div class="footer--info">
-        <p>〒461-0002 愛知県名古屋市東区代官町16-17
-          <br>アーク代官町ビルディング2F
-        </p>
-        <p>TEL:052-932-5450</p>
-        <p>FAX:052-932-5451</p>
-      </div>
-    </div>
-    <div class="footer--catch">
-      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/footer_catch.jpg" alt="トータルスマート" width="357" height="349" decoding="async">
-    </div>
+    <p>運営会社：株式会社QUORIX<br>
+      〒461-0004 愛知県名古屋市東区葵3-3-8 SLX葵ビル4F 404<br>
+      Copyright© 株式会社QUORIX All Rights Reserved.</p>
   </div>
-  <p class="footer--copy"><small>Copyright© 株式会社トータルスマート All Rights Reserved.</small></p>
 </footer>
 
 <?php get_footer(); ?>

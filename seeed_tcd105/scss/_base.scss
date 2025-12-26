@@ -105,37 +105,6 @@ main {
   }
 }
 
-//スクロールで出現するヘッダー
-.fixed-header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1111111111;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 10px 20px;
-  background: rgb(255 255 255 / 95%);
-  box-shadow: 0 3px 18px rgb(0 0 0 / 25%);
-
-  // デフォルトは transition 無し
-  transition: none;
-  transform: translateY(-100%);
-  will-change: transform;
-
-  &.is-ready {
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 500ms;
-    transition-property: transform;
-  }
-
-  &.is-visible.is-ready {
-    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-    transition-duration: 640ms;
-    transform: translateY(0);
-  }
-}
-
 
 // ---------------------------------------------
 //  フッター関連 footer

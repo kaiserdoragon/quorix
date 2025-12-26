@@ -16,3 +16,147 @@
 #container {
   margin-top: 0;
 }
+
+
+.region {
+  img {
+    display: block;
+    margin: 0 auto 60px;
+  }
+
+  dl {
+    div {
+      padding: 40px 30px;
+      border: 4px solid #004ba6;
+      box-shadow: 6.293px 7.771px 25px 0 rgb(0 42 93 / 40%);
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  dt {
+    position: relative;
+    width: 200px;
+    padding: 8px 0;
+    padding-left: 15px;
+    margin: 0 auto 15px;
+    font-size: var(--fz23);
+    color: #fff;
+    text-align: center;
+    background: #007bf8;
+    border-radius: 1000px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      width: 18px;
+      height: 26px;
+      content: "";
+      background: url(../../cleaninglp/img/icon_map.png) no-repeat center center / contain;
+      transform: translateY(-50%);
+    }
+  }
+
+  dd {
+    line-height: 1.8;
+  }
+
+  @include max-mq {
+    dl {
+      div {
+        padding: 30px;
+      }
+    }
+
+    dt {
+      width: 160px;
+      margin: 0 auto 15px;
+      font-size: var(--fz20);
+    }
+  }
+}
+
+.faq {
+  dt {
+    padding: 30px;
+    font-size: var(--fz20);
+    font-weight: 800;
+    color: #fff;
+    background: #007bf8;
+
+    &::before {
+      font-size: var(--fz23);
+      content: "Q.";
+    }
+  }
+
+  dd {
+    padding: 30px 30px 30px 70px;
+    text-indent: -23px;
+    background: #fff;
+
+    &::before {
+      font-size: var(--fz20);
+      content: "A.";
+    }
+  }
+
+  dl {
+    div {
+      &:nth-of-type(4) {
+        ul {
+          margin-top: 10px;
+          line-height: 1.8;
+          text-indent: 0;
+        }
+      }
+    }
+  }
+
+  div {
+    &:not(:last-of-type) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include max-mq {
+    dt {
+      padding: 15px;
+      padding-left: 35px;
+      font-size: var(--fz20);
+      text-indent: -20px;
+
+      &::before {
+        font-size: var(--fz20);
+      }
+    }
+
+    dd {
+      padding: 20px 20px 20px 30px;
+      text-indent: -15px;
+    }
+  }
+}
+
+.contact {
+  p {
+    margin-bottom: 30px;
+    font-size: var(--fz20);
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .thanks--tel {
+    margin: 0 auto 60px;
+  }
+
+  @include max-mq {
+    p {
+      margin-bottom: 60px;
+      font-size: var(--fz16);
+    }
+  }
+}
