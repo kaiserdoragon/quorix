@@ -1684,4 +1684,22 @@ add_action('wp_ajax_nopriv_get_faq_items', 'ajax_get_faq_items');
 
   add_filter('style_loader_tag', 'load_css_async_top', 10, 4);
 
+
+  /**
+   * 固定ページ「ikkatu」の時だけ TCD SEEED (tcd105) の responsive.css を強制解除する
+   */
+  function remove_tcd_responsive_css_on_specific_page()
+  {
+    // 固定ページのスラッグが「ikkatu」の場合のみ実行
+    if (is_page('ikkatu')) {
+      // スタイルのキュー（読み込み待ち）から外す
+      wp_dequeue_style('responsive');
+      // スタイルの登録自体を解除する
+      wp_deregister_style('responsive');
+    }
+  }
+
+  // 優先順位を「9999」にして確実に後から実行させる
+  add_action('wp_enqueue_scripts', 'remove_tcd_responsive_css_on_specific_page', 9999);
+
   ?>

@@ -1,131 +1,151 @@
-
 "use strict";
 
 console.log("エアコン一括見積");
 
-window.addEventListener('DOMContentLoaded', function () {
-    new ScrollHint('.js-scrollable', {
-        scrollHintIconAppendClass: 'scroll-hint-icon-white',
-        suggestiveShadow: true,
-        i18n: {
-            scrollable: "スクロールできます"
-        }
-    });
+window.addEventListener("DOMContentLoaded", function () {
+  new ScrollHint(".js-scrollable", {
+    scrollHintIconAppendClass: "scroll-hint-icon-white",
+    suggestiveShadow: true,
+    i18n: {
+      scrollable: "スクロールできます",
+    },
+  });
 });
-
 
 // SP(<=767px)のときだけフッター追従ボタンを有効化
 (() => {
-    const btn = document.getElementById('js_fixed-btn');
-    if (!btn) return;
+  const btn = document.getElementById("js_fixed-btn");
+  if (!btn) return;
 
-    const THRESHOLD = 500;
-    const mql = window.matchMedia('(max-width: 767px)');
-    let controller = null;
+  const THRESHOLD = 500;
+  const mql = window.matchMedia("(max-width: 767px)");
+  let controller = null;
 
-    const update = () => {
-        btn.classList.toggle('is-active', window.scrollY >= THRESHOLD);
-    };
+  const update = () => {
+    btn.classList.toggle("is-active", window.scrollY >= THRESHOLD);
+  };
 
-    const enable = () => {
-        if (controller) return; // すでに有効
-        controller = new AbortController();
-        const opts = { passive: true, signal: controller.signal };
+  const enable = () => {
+    if (controller) return; // すでに有効
+    controller = new AbortController();
+    const opts = { passive: true, signal: controller.signal };
 
-        // 初期反映
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', update, { once: true });
-        } else {
-            update();
-        }
+    // 初期反映
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", update, { once: true });
+    } else {
+      update();
+    }
 
-        // スクロール/リサイズで状態更新（SP時のみ有効）
-        window.addEventListener('scroll', update, opts);
-        window.addEventListener('resize', update, opts);
-    };
+    // スクロール/リサイズで状態更新（SP時のみ有効）
+    window.addEventListener("scroll", update, opts);
+    window.addEventListener("resize", update, opts);
+  };
 
-    const disable = () => {
-        if (!controller) return;
-        controller.abort();   // まとめてリスナー解除
-        controller = null;
-        btn.classList.remove('is-active'); // デスクトップへ戻ったら非表示に
-    };
+  const disable = () => {
+    if (!controller) return;
+    controller.abort(); // まとめてリスナー解除
+    controller = null;
+    btn.classList.remove("is-active"); // デスクトップへ戻ったら非表示に
+  };
 
-    // 初期判定
-    mql.matches ? enable() : disable();
+  // 初期判定
+  mql.matches ? enable() : disable();
 
-    // 767pxをまたいだら有効/無効を切り替え
-    mql.addEventListener('change', (e) => (e.matches ? enable() : disable()));
+  // 767pxをまたいだら有効/無効を切り替え
+  mql.addEventListener("change", (e) => (e.matches ? enable() : disable()));
 })();
 
-
-
-// ヘッダーのスクロール位置を取得 /////////////////////////////////////////////
-// headerの高さ分スクロールしたら、-fixedクラスをつける。
-const Header = document.getElementById("js-header");
-if (Header) {
-    const options = {
-        root: null,
-        rootMargin: `${Header.offsetHeight}px 0px ${document.body.clientHeight}px 0px`,
-        threshold: 1,
-    };
-
-    const observer = new IntersectionObserver(change_header, options);
-    observer.observe(document.body);
-    function change_header(entries) {
-        if (!entries[0].isIntersecting) {
-            Header.classList.add("-fixed");
-        } else {
-            Header.classList.remove("-fixed");
-        }
-    }
-}
-
-// グローバルナビゲーション //////////////////////////////////////////////////////
-const Gnav_btn = document.getElementById("js-gnav_btn");
-const Gnav = document.getElementById("js-gnav");
-if (Gnav_btn) {
-    Gnav_btn.addEventListener("click", (e) => {
-        e.currentTarget.classList.toggle("is-open");
-        Gnav.classList.toggle("is-open");
-    });
-
-    // メニューのどこかが押されたら閉じる
-    Gnav.addEventListener("click", (e) => {
-        Gnav_btn.classList.remove("is-open");
-        Gnav.classList.remove("is-open");
-    });
-}
-
-// ページトップへ移動するボタン(クリックでページトップへスクロール) ///////////////////////////
-const Totop = document.getElementById("js-totop");
-if (Totop) {
-    Totop.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-}
-
-
-
-
-
-
-
 (function ($, root, undefined) {
-    // #ページ内リンク
-    $(function () {
-        $('a[href^="#"]').click(function () {
-            var speed = 600;
-            var href = $(this).attr("href");
-            var target = $(href === "#" || href === "" ? 'html' : href);
+  // #ページ内リンク
+  $(function () {
+    $('a[href^="#"]').click(function () {
+      var speed = 600;
+      var href = $(this).attr("href");
+      var target = $(href === "#" || href === "" ? "html" : href);
 
-            if (target.length) {
-                var headerHeight = $('.header').outerHeight();
-                if (!headerHeight) { headerHeight = 0; }
-                var position = target.offset().top - headerHeight;
-                $('body,html').stop().animate({ scrollTop: position }, speed, 'swing');
-            }
-            return false;
-        });
+      if (target.length) {
+        var headerHeight = $(".header").outerHeight();
+        if (!headerHeight) {
+          headerHeight = 0;
+        }
+        var position = target.offset().top - headerHeight;
+        $("body,html").stop().animate({ scrollTop: position }, speed, "swing");
+      }
+      return false;
     });
+  });
+
+  // PC(>=768px)のときだけスクロールで出現するヘッダーを有効化
+  $(function () {
+    var mql = window.matchMedia("(min-width: 768px)");
+
+    var $win = $(window);
+    var $header = $("#js-fixed-header");
+    var $main = $("main");
+
+    var threshold = 0;
+    var ticking = false;
+    var enabled = false;
+    var initialized = false;
+
+    function recalcThreshold() {
+      threshold = $main.length ? $main.offset().top : 0;
+      apply();
+    }
+
+    function apply() {
+      var sc = $win.scrollTop();
+      if (sc > threshold) {
+        $header.addClass("is-visible");
+      } else {
+        $header.removeClass("is-visible");
+      }
+
+      // 初回 apply のあとでだけ is-ready を付ける
+      if (!initialized) {
+        $header.addClass("is-ready");
+        initialized = true;
+      }
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          apply();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+
+    function enable() {
+      if (enabled) return;
+      enabled = true;
+      recalcThreshold();
+      $win.on("scroll.fixedHeader", onScroll);
+      $win.on("resize.fixedHeader", recalcThreshold);
+    }
+
+    function disable() {
+      if (!enabled) return;
+      enabled = false;
+      $win.off(".fixedHeader");
+      $header.removeClass("is-visible is-ready");
+      initialized = false;
+    }
+
+    function check() {
+      if (mql.matches) enable();
+      else disable();
+    }
+
+    check();
+
+    if (mql.addEventListener) {
+      mql.addEventListener("change", check);
+    } else if (mql.addListener) {
+      mql.addListener(check);
+    }
+  });
 })(jQuery, this);
