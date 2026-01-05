@@ -1601,7 +1601,7 @@ add_action('wp_ajax_nopriv_get_faq_items', 'ajax_get_faq_items');
   // CSSは基本的にこっち
   function allsite_style_script()
   {
-    if (is_page('ikkatu')) {
+    if (is_page(array('ikkatu', 'ikkatu_thanks'))) {
       $theme_uri = get_template_directory_uri();
       $version = '6.9'; // キャッシュ対策用のバージョン
 
@@ -1621,7 +1621,7 @@ add_action('wp_ajax_nopriv_get_faq_items', 'ajax_get_faq_items');
   {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-      if (is_page('ikkatu')) {
+      if (is_page(array('ikkatu', 'ikkatu_thanks'))) {
         //テーマ用のjsファイルを読み込み
         wp_register_script('mainscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'));
         wp_enqueue_script('mainscripts');
@@ -1685,6 +1685,10 @@ add_action('wp_ajax_nopriv_get_faq_items', 'ajax_get_faq_items');
   add_filter('style_loader_tag', 'load_css_async_top', 10, 4);
 
 
+
+
+
+
   /**
    * 固定ページ「ikkatu」の時だけ TCD SEEED (tcd105) の
    * responsive.css と design-plus.css を強制解除する
@@ -1692,7 +1696,7 @@ add_action('wp_ajax_nopriv_get_faq_items', 'ajax_get_faq_items');
   function remove_tcd_styles_on_specific_page()
   {
     // 固定ページのスラッグが「ikkatu」の場合のみ実行
-    if (is_page('ikkatu')) {
+    if (is_page(array('ikkatu', 'ikkatu_thanks'))) {
 
       // 1. responsive.css の解除
       wp_dequeue_style('responsive');
@@ -1708,9 +1712,46 @@ add_action('wp_ajax_nopriv_get_faq_items', 'ajax_get_faq_items');
   add_action('wp_enqueue_scripts', 'remove_tcd_styles_on_specific_page', 9999);
 
 
-  // Contact Form 7の自動pタグ無効
-  add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
-  function wpcf7_autop_return_false()
+
+
+
+
+  // Contact Form 7の自動pタグ無効（特定のページのみ）
+  add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false_on_specific_page');
+
+  function wpcf7_autop_return_false_on_specific_page($autop)
   {
-    return false;
+    // スラッグが 'ikkatu' の固定ページの場合のみ false を返す
+    if (is_page(array('ikkatu', 'ikkatu_thanks'))) {
+      return false;
+    }
+    // それ以外のページはデフォルト設定（true）を返す
+    return $autop;
   }
+
+
+
+
+  /**
+   * 特定固定ページでは「外観 → 追加CSS」を出力しない
+   */
+  add_filter('wp_get_custom_css', function ($css, $stylesheet) {
+    if (is_page(['ikkatu', 'ikkatu_thanks'])) { // スラッグ指定
+      return '';
+    }
+    return $css;
+  }, 10, 2);
+
+
+  // 特定固定ページではテーマの style.css を読み込まない
+  add_action('wp_enqueue_scripts', function () {
+    if (!is_page(['ikkatu', 'ikkatu_thanks'])) {
+      return;
+    }
+
+    $handle = 'main-style'; // 例: ソースの id="XXXX-css" の XXXX を入れる
+
+    // 既にキューに入っているCSSを外す（テーマ側より後に実行するのが重要）
+    wp_dequeue_style($handle);
+    wp_deregister_style($handle);
+  }, 999);

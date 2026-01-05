@@ -254,3 +254,24 @@ table {
     }
   }
 }
+
+
+
+
+.thanks {
+  p {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  // .thanks--tel
+  &--tel {
+    width: fit-content;
+    margin: 0 auto 15px;
+  }
+
+  // .thanks--back
+  &--back {
+    text-decoration: underline;
+  }
+}

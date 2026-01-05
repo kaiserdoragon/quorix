@@ -1,0 +1,175 @@
+<?php
+/*
+Template Name: エアコン見積り一括LPのサンクスページ
+*/
+defined('ABSPATH') || exit;
+
+/**
+ * JSON-LD（構造化データ）
+ * - microdataは使わずJSON-LDのみ
+ * - URLは esc_url_raw()（表示用のエンティティ変換をしない）
+ * - wp_head に出力
+ */
+$home_url = esc_url_raw(home_url('/'));
+
+$logo_url = esc_url_raw(get_theme_file_uri('/img/ikkatu/logo.png'));
+$mv_url   = esc_url_raw(get_theme_file_uri('/img/ikkatu/mv.jpg'));
+
+$ld_json = [
+  '@context'   => 'https://schema.org',
+  '@type'      => 'LocalBusiness',
+  '@id'        => $home_url . '#localbusiness',
+  'name'       => '株式会社QUORIX',
+  'url'        => $home_url,
+  'telephone'  => '+81-52-932-5450',
+  'logo'       => $logo_url,
+  'image'      => [$mv_url],
+  'address'    => [
+    '@type'           => 'PostalAddress',
+    'postalCode'      => '461-0002',
+    'addressRegion'   => '愛知県',
+    'addressLocality' => '名古屋市東区',
+    'streetAddress'   => '3-3-8 SLX葵ビル4F 404',
+  ],
+  'areaServed' => ['愛知県', '岐阜県', '三重県', '静岡県'],
+];
+
+add_action('wp_head', static function () use ($ld_json) {
+  echo "\n" . '<script type="application/ld+json">'
+    . wp_json_encode($ld_json, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)
+    . '</script>' . "\n";
+}, 1);
+
+get_header();
+?>
+
+
+<header class="header">
+  <div class="header--catch">
+    <p class="contents">
+      <span>中小企業利用多数！</span>
+      安心度・信頼感
+      <img src="<?php echo get_template_directory_uri(); ?>/img/ikkatu/txt_no1.png" alt="NO.1" width="102" height="38">
+    </p>
+  </div>
+  <div class="contents">
+    <div class="header--inner">
+      <section class="header--logo">
+        <p>エアコンの一括見積サイトの端的な説明文</p>
+        <a href="<?php echo esc_url(home_url('/ikkatu/')); ?>">
+          <h1>
+            <picture>
+              <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/logo.avif" type="image/avif">
+              <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/img/logo.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/img/logo.png"
+                alt="東海エアコン見積ナビ"
+                width="379" height="63"
+                fetchpriority="high"
+                loading="eager"
+                decoding="async">
+            </picture>
+          </h1>
+        </a>
+      </section>
+      <div class="header--btns">
+        <div class="header--item">
+          <a href="tel:052-932-5450">
+            <picture>
+              <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.avif" type="image/avif">
+              <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.png"
+                alt="お電話でのご相談はこちら: 052-932-5450"
+                width="327" height="82"
+                decoding="async">
+            </picture>
+          </a>
+        </div>
+        <div class="header--item">
+          <a href="#contact">
+            <picture>
+              <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/mail.avif" type="image/avif">
+              <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/mail.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/mail.png"
+                alt="メールでお問い合わせ"
+                width="327" height="82"
+                decoding="async">
+            </picture>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div id="js-fixed-header" class="fixed-header">
+  <div class="header--btns">
+    <div class="header--btn-item">
+      <a href="tel:052-932-5450" class="cv_button gtm-click-tel">
+        <picture>
+          <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.avif" type="image/avif">
+          <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.webp" type="image/webp">
+          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.png"
+            alt="お電話でのご相談はこちら: 052-932-5450"
+            width="327" height="82"
+            decoding="async">
+        </picture>
+      </a>
+    </div>
+    <div class="header--btn-item">
+      <a href="#contact" class="cv_button gtm-click-mail">
+        <picture>
+          <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/mail.avif" type="image/avif">
+          <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/mail.webp" type="image/webp">
+          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/mail.png"
+            alt="メールでお問い合わせ"
+            width="327" height="82"
+            decoding="async">
+        </picture>
+      </a>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section class="thanks sec -sm">
+    <div class="contents -md">
+      <h2 class="ttl">お問い合わせありがとうございます</h2>
+      <p>
+        お問い合わせありがとうございます。<br>
+        このたびは、トータルスマート株式会社へお問い合わせ頂き誠にありがとうございます。<br>
+        お送り頂きました内容を確認の上、2～3営業日以内に折り返しご連絡させて頂きます。<br>
+
+        なお、お急ぎの場合は電話でもご相談を受け付けております。<br>
+        052-932-5450までご遠慮なくご相談ください。
+      </p>
+      <div class="thanks--tel">
+        <a href="tel:052-932-5450" class="cv_button">
+          <picture>
+            <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.avif" type="image/avif">
+            <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/img/tel.webp" type="image/webp">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/img/tel.png"
+              alt="お電話でのご相談はこちら: 052-932-5450"
+              width="355" height="90"
+              decoding="async">
+          </picture>
+        </a>
+      </div>
+
+      <a class="thanks--back" href="<?php echo esc_url(home_url('/ikkatu/')); ?>">ページのTOPに戻る</a>
+    </div>
+  </section>
+</main>
+
+<div class="footer_btn_fixed" id="js_fixed-btn">
+  <p class="footer_btn_fixed--tel"><a href="tel:052-932-5450">電話で予約する</a></p>
+  <p class="footer_btn_fixed--mail"><a href="#contact">メールで無料見積り</a></p>
+</div>
+
+<footer class="footer bg_blue">
+  <div class="contents -md">
+    <p>運営会社：株式会社QUORIX<br>
+      〒461-0004 愛知県名古屋市東区葵3-3-8 SLX葵ビル4F 404<br>
+      Copyright© 株式会社QUORIX All Rights Reserved.</p>
+  </div>
+</footer>
+
+<?php get_footer(); ?>

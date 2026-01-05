@@ -131,7 +131,20 @@ get_header();
 
 <main>
   <div class="mv">
+    <div>
+      <dl>
+        <dt>愛知県・岐阜県・三重県・静岡県</dt>
+        <dd>優良業者のみをご紹介</dd>
+      </dl>
+      <p><img src="<?php echo get_template_directory_uri(); ?>/img/ikkatu/mv_txt_01.png" alt="業務用エアコン" width="459" height="71"><span>のトラブルを</span></p>
+      <p><img src="<?php echo get_template_directory_uri(); ?>/img/ikkatu/mv_txt_02.png" alt="最適な1社" width="367" height="87"><span>を選べます</span></p>
 
+
+      <a href="">一括見積りをする</a>
+    </div>
+    <div>
+      <?php echo apply_shortcodes('[contact-form-7 id="3d4e383" title="エアコン一括見積LPフォーム（MV）"]'); ?>
+    </div>
   </div>
   <section class="flow sec">
     <div class="contents">
