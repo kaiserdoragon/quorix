@@ -103,6 +103,13 @@ main {
       gap: 3px;
     }
   }
+
+  // .header--item
+  &--item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 

@@ -17,6 +17,88 @@
   margin-top: 0;
 }
 
+.use {
+  .ttl {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+
+  ol {
+    max-width: 1000px;
+    margin: auto; /* カウンターを初期化 */
+    counter-reset: num;
+  }
+
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    padding: 30px;
+    background: #fff;
+
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+
+  h3 {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: var(--fz25);
+    font-weight: 800;
+    color: #007bf8;
+    counter-increment: num;
+    border-bottom: 1px solid #007bf8;
+
+    &::before {
+      padding: 8px;
+      margin-right: 10px;
+      font-size: var(--fz20);
+      font-weight: 900;
+      color: #fff;
+      content: "STEP" counter(num, decimal-leading-zero);
+      background: #007bf8;
+      border-radius: 5px;
+    }
+  }
+
+  // .use--txt
+  &--txt {
+    width: 65%;
+
+    @include max-mq {
+      width: 100%;
+    }
+  }
+
+  @include max-mq {
+    h3 {
+      font-size: var(--fz20);
+
+      &::before {
+        padding: 5px 8px;
+        font-size: var(--fz16);
+      }
+
+      + img {
+        display: block;
+        width: 100%;
+        height: 200px;
+        margin: 0 auto 15px;
+        object-fit: cover;
+      }
+    }
+
+    li {
+      gap: 15px;
+      padding: 15px;
+    }
+  }
+}
 
 .region {
   img {
@@ -55,7 +137,7 @@
       width: 18px;
       height: 26px;
       content: "";
-      background: url(../../cleaninglp/img/icon_map.png) no-repeat center center / contain;
+      background: url(../img/ikkatu/icon_map.png) no-repeat center center / contain;
       transform: translateY(-50%);
     }
   }

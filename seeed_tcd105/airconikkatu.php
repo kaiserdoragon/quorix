@@ -72,8 +72,8 @@ get_header();
         </a>
       </section>
       <div class="header--btns">
-        <div class="header--btn-item">
-          <a href="tel:052-932-5450" class="cv_button gtm-click-tel">
+        <div class="header--item">
+          <a href="tel:052-932-5450">
             <picture>
               <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.avif" type="image/avif">
               <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.webp" type="image/webp">
@@ -84,8 +84,8 @@ get_header();
             </picture>
           </a>
         </div>
-        <div class="header--btn-item">
-          <a href="#contact" class="cv_button gtm-click-mail">
+        <div class="header--item">
+          <a href="#contact">
             <picture>
               <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/mail.avif" type="image/avif">
               <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/mail.webp" type="image/webp">
@@ -173,7 +173,7 @@ get_header();
       <h2 class="ttl">導入事例事例</h2>
       <div class="voice--inner">
         <div class="voice--item">
-          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/voice_01.jpg" alt="" width="380" height="200" decoding="async">
+          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/voice_01.jpg" alt="" width="380" height="200" decoding="async">
           <div>
             <h3>オフィスの空気が一気に軽くなりました</h3>
             <span>名古屋市　IT企業　A様</span>
@@ -184,7 +184,7 @@ get_header();
             来客対応にも自信が持てるようになりました。</p>
         </div>
         <div class="voice--item">
-          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/voice_02.jpg" alt="" width="380" height="200" decoding="async">
+          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/voice_02.jpg" alt="" width="380" height="200" decoding="async">
           <div>
             <h3>「前より居心地がいい」と言われました</h3>
             <span>岐阜市　飲食店　I様</span>
@@ -195,7 +195,7 @@ get_header();
             して快適な温度を保てています。</p>
         </div>
         <div class="voice--item">
-          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/voice_03.jpg" alt="" width="380" height="200" decoding="async">
+          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/voice_03.jpg" alt="" width="380" height="200" decoding="async">
           <div>
             <h3>「清潔感が増した」と評判です</h3>
             <span>四日市市　クリニック　T様</span>
@@ -218,18 +218,18 @@ get_header();
         <li>
           <div class="use--txt">
             <h3>お問い合わせ</h3>
-            <img class="is-hidden_pc" src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/use_01.jpg" alt="" width="250" height="250" decoding="async">
+            <img class="is-hidden_pc" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/use_01.jpg" alt="" width="250" height="250" decoding="async">
             <p>サービスの詳細、気になっている汚れやお掃除したい箇所についてなど、
               お電話またはメールフォームにてお気軽にお問い合わせください。</p>
           </div>
           <div>
-            <img class="is-hidden_sp" src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/use_01.jpg" alt="" width="250" height="250" decoding="async">
+            <img class="is-hidden_sp" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/use_01.jpg" alt="" width="250" height="250" decoding="async">
           </div>
         </li>
         <li>
           <div class="use--txt">
             <h3>ヒアリング</h3>
-            <img class="is-hidden_pc" src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/use_02.jpg" alt="" width="250" height="250" decoding="async">
+            <img class="is-hidden_pc" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/use_02.jpg" alt="" width="250" height="250" decoding="async">
             <p>
               お見積り訪問日時などを相談させていただきます。<br>
               ご希望のサービス内容を詳しくお伺いし、お掃除・お手伝いする
@@ -237,13 +237,13 @@ get_header();
             </p>
           </div>
           <div>
-            <img class="is-hidden_sp" src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/use_02.jpg" alt="" width="250" height="250" decoding="async">
+            <img class="is-hidden_sp" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/use_02.jpg" alt="" width="250" height="250" decoding="async">
           </div>
         </li>
         <li>
           <div class="use--txt">
             <h3>お見積りご提示</h3>
-            <img class="is-hidden_pc" src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/use_03.jpg" alt="" width="250" height="250" decoding="async">
+            <img class="is-hidden_pc" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/use_03.jpg" alt="" width="250" height="250" decoding="async">
             <p>
               担当スタッフが訪問し、お掃除対象箇所を確認後無料でお見積りを
               ご提示します。<br>
@@ -251,38 +251,38 @@ get_header();
             </p>
           </div>
           <div>
-            <img class="is-hidden_sp" src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/use_03.jpg" alt="" width="250" height="250" decoding="async">
+            <img class="is-hidden_sp" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/use_03.jpg" alt="" width="250" height="250" decoding="async">
           </div>
         </li>
         <li>
           <div class="use--txt">
             <h3>スケジュールの相談</h3>
-            <img class="is-hidden_pc" src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/use_04.jpg" alt="" width="250" height="250" decoding="async">
+            <img class="is-hidden_pc" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/use_04.jpg" alt="" width="250" height="250" decoding="async">
             <p>お見積りから正式にご依頼をいただいたのち、サービス実施日時やスケジュールについて相談させていただきます。</p>
           </div>
           <div>
-            <img class="is-hidden_sp" src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/use_04.jpg" alt="" width="250" height="250" decoding="async">
+            <img class="is-hidden_sp" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/use_04.jpg" alt="" width="250" height="250" decoding="async">
           </div>
         </li>
         <li>
           <div class="use--txt">
             <h3>サービス実施</h3>
-            <img class="is-hidden_pc" src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/use_05.jpg" alt="" width="250" height="250" decoding="async">
+            <img class="is-hidden_pc" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/use_05.jpg" alt="" width="250" height="250" decoding="async">
             <p>担当スタッフが訪問し、サービスを実施します。お見積り以上の請求が発生することはありませんが、追加のご要望などがあれば請求額が変わる場合もございます。</p>
           </div>
           <div>
-            <img class="is-hidden_sp" src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/use_05.jpg" alt="" width="250" height="250" decoding="async">
+            <img class="is-hidden_sp" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/use_05.jpg" alt="" width="250" height="250" decoding="async">
           </div>
         </li>
         <li>
           <div class="use--txt">
             <h3>お支払い</h3>
-            <img class="is-hidden_pc" src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/use_06.jpg" alt="" width="250" height="250" decoding="async">
+            <img class="is-hidden_pc" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/use_06.jpg" alt="" width="250" height="250" decoding="async">
             <p>お支払い方法は現金・銀行振込・クレジットカードがご利用いただけます。 <br>
               銀行振込をご利用の場合の振込先はお見積りの際にご案内いたします。</p>
           </div>
           <div>
-            <img class="is-hidden_sp" src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/use_06.jpg" alt="" width="250" height="250" decoding="async">
+            <img class="is-hidden_sp" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/use_06.jpg" alt="" width="250" height="250" decoding="async">
           </div>
         </li>
       </ol>
@@ -292,7 +292,7 @@ get_header();
   <section class="region sec">
     <div class="contents -md">
       <h2 class="ttl">対応エリア</h2>
-      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/cleaninglp/img/map.png" alt="" width="518" height="534" decoding="async">
+      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/map.png" alt="" width="518" height="534" decoding="async">
       <dl>
         <div>
           <dt>
