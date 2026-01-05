@@ -286,6 +286,10 @@ get_header();
           </div>
         </li>
       </ol>
+      <b>業者が確定したら、ご指定いただいた日時に作業を行います。<br>
+        作業が完了しましたら、請求金額を作業員へお渡しください。</b>
+      <span>※業者によってはクレジットカードや請求書払いに対応しているところもあります。</span>
+      <p>現金払い以外でのお支払いをご希望の方は、お見積りの際にお伝えください。</p>
     </div>
   </section>
 
@@ -405,7 +409,7 @@ get_header();
         こちらのフォームからご連絡ください。<br>
         無料でお見積もり・ご提案いたします。
       </p>
-      <?php echo apply_shortcodes('[contact-form-7 id="565" title="エアコンのクリーニングのフォーム"]'); ?>
+      <?php echo apply_shortcodes('[contact-form-7 id="aa1eb3f" title="エアコン一括見積LPフォーム（フッター）"]'); ?>
     </div>
   </section>
 </main>

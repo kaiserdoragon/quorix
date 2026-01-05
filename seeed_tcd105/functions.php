@@ -1686,20 +1686,31 @@ add_action('wp_ajax_nopriv_get_faq_items', 'ajax_get_faq_items');
 
 
   /**
-   * 固定ページ「ikkatu」の時だけ TCD SEEED (tcd105) の responsive.css を強制解除する
+   * 固定ページ「ikkatu」の時だけ TCD SEEED (tcd105) の
+   * responsive.css と design-plus.css を強制解除する
    */
-  function remove_tcd_responsive_css_on_specific_page()
+  function remove_tcd_styles_on_specific_page()
   {
     // 固定ページのスラッグが「ikkatu」の場合のみ実行
     if (is_page('ikkatu')) {
-      // スタイルのキュー（読み込み待ち）から外す
+
+      // 1. responsive.css の解除
       wp_dequeue_style('responsive');
-      // スタイルの登録自体を解除する
       wp_deregister_style('responsive');
+
+      // 2. design-plus.css の解除
+      wp_dequeue_style('design-plus');
+      wp_deregister_style('design-plus');
     }
   }
 
   // 優先順位を「9999」にして確実に後から実行させる
-  add_action('wp_enqueue_scripts', 'remove_tcd_responsive_css_on_specific_page', 9999);
+  add_action('wp_enqueue_scripts', 'remove_tcd_styles_on_specific_page', 9999);
 
-  ?>
+
+  // Contact Form 7の自動pタグ無効
+  add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+  function wpcf7_autop_return_false()
+  {
+    return false;
+  }
