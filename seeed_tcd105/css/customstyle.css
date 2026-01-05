@@ -561,6 +561,73 @@ main {
 .mv {
   background: #0f88da;
 }
+.mv dt {
+  font-size: var(--fz30);
+  font-weight: 900;
+}
+.mv dd {
+  font-size: var(--fz45);
+  font-weight: 900;
+}
+.mv strong {
+  display: block;
+}
+.mv strong span {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  font-size: 60px;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  -webkit-text-stroke-width: 25px;
+}
+.mv strong span::before {
+  position: absolute;
+  left: 0;
+  z-index: 30;
+  color: #fff;
+  content: attr(data-text);
+  -webkit-text-stroke-width: 0;
+}
+.mv strong span::after {
+  position: absolute;
+  left: 0;
+  z-index: 20;
+  color: #000;
+  content: attr(data-text);
+  -webkit-text-stroke-width: 15px;
+}
+.mv label {
+  display: block;
+  margin-bottom: 30px;
+}
+.mv input {
+  border-radius: 5px;
+}
+.mv .is-required {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.mv .is-required::after {
+  position: absolute;
+  right: -50px;
+  box-sizing: border-box;
+  width: 40px;
+  padding: 2px 5px 3px;
+  font-size: var(--fz14);
+  text-align: center;
+}
+.mv .contact_form--wrap {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  color: #fff;
+  background: #024897;
+  border-radius: 10px;
+}
 
 .voice--inner {
   display: grid;
@@ -770,25 +837,29 @@ main {
   }
 }
 
-.contact p {
-  margin-bottom: 30px;
+.wpcf7 input::placeholder,
+.wpcf7 textarea::placeholder {
+  color: #c8c8c8;
+}
+
+span.wpcf7-list-item {
+  margin: 0 10px 0 0;
+}
+
+.contact .thanks--tel {
+  margin: 0 auto 60px;
+}
+.contact--lead {
+  margin-bottom: 80px;
   font-size: var(--fz20);
   font-weight: 600;
   text-align: center;
 }
-.contact .thanks--tel {
-  margin: 0 auto 60px;
-}
 @media (max-width: 767px) {
-  .contact p {
+  .contact--lead {
     margin-bottom: 60px;
     font-size: var(--fz16);
   }
-}
-
-.wpcf7 input::placeholder,
-.wpcf7 textarea::placeholder {
-  color: #c8c8c8;
 }
 
 .contact_form textarea {
@@ -920,6 +991,7 @@ main {
   font-weight: 500;
   color: #fff;
   text-align: center;
+  cursor: pointer;
   background: #1352c3;
   border: none;
   border-radius: 1000px;
@@ -955,6 +1027,10 @@ main {
   .contact_form--btn {
     margin: 30px auto 0;
   }
+}
+.contact_form--privacy {
+  margin-top: 30px;
+  text-align: center;
 }
 
 .frm.danger {

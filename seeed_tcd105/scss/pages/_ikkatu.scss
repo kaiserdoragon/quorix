@@ -20,6 +20,88 @@
 
 .mv {
   background: #0f88da;
+
+  dt {
+    font-size: var(--fz30);
+    font-weight: 900;
+  }
+
+  dd {
+    font-size: var(--fz45);
+    font-weight: 900;
+  }
+
+  strong {
+    display: block;
+
+    span {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      display: inline-block;
+      font-size: 60px;
+      color: #fff;
+      transform: translate(-50%, -50%);
+      -webkit-text-stroke-width: 25px;
+
+      &::before {
+        position: absolute;
+        left: 0;
+        z-index: 30;
+        color: #fff;
+        content: attr(data-text);
+        -webkit-text-stroke-width: 0;
+      }
+
+      &::after {
+        position: absolute;
+        left: 0;
+        z-index: 20;
+        color: #000;
+        content: attr(data-text);
+        -webkit-text-stroke-width: 15px;
+      }
+    }
+  }
+
+  label {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  input {
+    border-radius: 5px;
+  }
+
+  .is-required {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 5px;
+
+
+    &::after {
+      position: absolute;
+      right: -50px;
+      box-sizing: border-box;
+      width: 40px;
+      padding: 2px 5px 3px;
+      font-size: var(--fz14);
+      text-align: center;
+    }
+  }
+
+  .contact_form {
+    // .contact_form--wrap
+    &--wrap {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 600px;
+      padding: 30px;
+      color: #fff;
+      background: #024897;
+      border-radius: 10px;
+    }
+  }
 }
 
 .voice {
@@ -276,26 +358,6 @@
     dd {
       padding: 20px 20px 20px 30px;
       text-indent: -15px;
-    }
-  }
-}
-
-.contact {
-  p {
-    margin-bottom: 30px;
-    font-size: var(--fz20);
-    font-weight: 600;
-    text-align: center;
-  }
-
-  .thanks--tel {
-    margin: 0 auto 60px;
-  }
-
-  @include max-mq {
-    p {
-      margin-bottom: 60px;
-      font-size: var(--fz16);
     }
   }
 }

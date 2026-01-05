@@ -10,6 +10,29 @@
   color: #c8c8c8;
 }
 
+span.wpcf7-list-item {
+  margin: 0 10px 0 0;
+}
+
+.contact {
+  .thanks--tel {
+    margin: 0 auto 60px;
+  }
+
+  // .contact--lead
+  &--lead {
+    margin-bottom: 80px;
+    font-size: var(--fz20);
+    font-weight: 600;
+    text-align: center;
+
+    @include max-mq {
+      margin-bottom: 60px;
+      font-size: var(--fz16);
+    }
+  }
+}
+
 .contact_form {
   textarea {
     height: 240px;
@@ -170,6 +193,7 @@
     font-weight: 500;
     color: #fff;
     text-align: center;
+    cursor: pointer;
     background: #1352c3;
     border: none;
     border-radius: 1000px;
@@ -201,5 +225,11 @@
     @include max-mq {
       margin: 30px auto 0;
     }
+  }
+
+  // .contact_form--privacy
+  &--privacy {
+    margin-top: 30px;
+    text-align: center;
   }
 }
