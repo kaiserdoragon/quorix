@@ -756,6 +756,12 @@ main {
   text-align: center;
 }
 
+.flow ol {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
 .voice--inner {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

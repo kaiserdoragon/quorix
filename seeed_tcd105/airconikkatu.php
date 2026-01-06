@@ -148,15 +148,38 @@ get_header();
       </div>
     </div>
   </div>
-  <section class="flow sec">
+
+  <section class="flow sec bg_skyblue">
     <div class="contents">
       <h2>ご利用の流れ<span>かんたん3つのステップ</span></h2>
       <ol>
         <li>
+          <dl>
+            <dt>①フォームから希望の内容を入力</dt>
+            <dd>完全無料、登録なし、利用料なし。<br>
+              フォームからご要望を<br class="is-hidden_sp">
+              簡単にご記入ください。</dd>
+          </dl>
         </li>
         <li>
+          <dl>
+            <dt>②ピッタリの業者を紹介します</dt>
+            <dd>
+              予算、ご要望、お悩みなどを<br class="is-hidden_sp">
+              詳しくお聞かせください。
+              現地調査の日程調整をします。
+            </dd>
+          </dl>
         </li>
         <li>
+          <dl>
+            <dt>③気に入った業者を選んでください</dt>
+            <dd>
+              見積もりを受け取り、<br class="is-hidden_sp">
+              比較してご検討ください。
+              すべて見送ってもかまいません。
+            </dd>
+          </dl>
         </li>
       </ol>
     </div>
