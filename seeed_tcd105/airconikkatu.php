@@ -128,22 +128,24 @@ get_header();
     </div>
   </div>
 </div>
-
 <main>
   <div class="mv">
-    <div class="mv--contents">
-      <dl>
-        <dt>愛知県・岐阜県・三重県・静岡県</dt>
-        <dd>優良業者のみをご紹介</dd>
-      </dl>
-      <img src="<?php echo get_template_directory_uri(); ?>/img/ikkatu/mv_txt_01.png" alt="エアコンのトラブルを" width="609" height="88">
-      <strong>最短当日対応の<span>一括見積り</span>で解決!!</strong>
-      <p><img src="<?php echo get_template_directory_uri(); ?>/img/ikkatu/mv_txt_02.png" alt="最適な1社" width="367" height="87"><span>を選べます</span></p>
-      <a href="#contact" class="shine-button">一括見積りをする</a>
-      <img src="<?php echo get_template_directory_uri(); ?>/img/ikkatu/mv_point.png" alt="" width="738" height="218">
-    </div>
-    <div class="mv--form">
-      <?php echo apply_shortcodes('[contact-form-7 id="3d4e383" title="エアコン一括見積LPフォーム（MV）"]'); ?>
+    <div class="contents">
+      <div class="mv--contents">
+        <dl>
+          <dt>愛知県・岐阜県・三重県・静岡県</dt>
+          <dd>優良業者のみをご紹介</dd>
+        </dl>
+        <img src="<?php echo get_template_directory_uri(); ?>/img/ikkatu/mv_txt_01.png" alt="エアコンのトラブルを" width="609" height="88">
+        <strong>最短当日対応の<span>一括見積り</span>で解決!!</strong>
+        <p>最大<span class="mv--num">5<span class="mv--num -sm">社</span></span>から</p>
+        <p><img src="<?php echo get_template_directory_uri(); ?>/img/ikkatu/mv_txt_02.png" alt="最適な1社" width="367" height="87"><span>を選べます</span></p>
+        <a href="#contact" class="mv--link">一括見積りをする</a>
+        <img src="<?php echo get_template_directory_uri(); ?>/img/ikkatu/mv_point.png" alt="" width="738" height="218">
+      </div>
+      <div class="mv--form">
+        <?php echo apply_shortcodes('[contact-form-7 id="3d4e383" title="エアコン一括見積LPフォーム（MV）"]'); ?>
+      </div>
     </div>
   </div>
   <section class="flow sec">
