@@ -73,7 +73,7 @@ get_header();
       </section>
       <div class="header--btns">
         <div class="header--item">
-          <a href="tel:052-932-5450">
+          <a href="tel:052-932-5450" class="cv_button">
             <picture>
               <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.avif" type="image/avif">
               <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.webp" type="image/webp">
@@ -85,7 +85,7 @@ get_header();
           </a>
         </div>
         <div class="header--item">
-          <a href="#contact">
+          <a href="#contact" class="cv_button">
             <picture>
               <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/mail.avif" type="image/avif">
               <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/mail.webp" type="image/webp">
@@ -137,8 +137,10 @@ get_header();
         <dd>優良業者のみをご紹介</dd>
       </dl>
       <img src="<?php echo get_template_directory_uri(); ?>/img/ikkatu/mv_txt_01.png" alt="エアコンのトラブルを" width="609" height="88">
+      <strong>最短当日対応の<span>一括見積り</span>で解決!!</strong>
       <p><img src="<?php echo get_template_directory_uri(); ?>/img/ikkatu/mv_txt_02.png" alt="最適な1社" width="367" height="87"><span>を選べます</span></p>
-      <a href="">一括見積りをする</a>
+      <a href="#contact" class="shine-button">一括見積りをする</a>
+      <img src="<?php echo get_template_directory_uri(); ?>/img/ikkatu/mv_point.png" alt="" width="738" height="218">
     </div>
     <div class="mv--form">
       <?php echo apply_shortcodes('[contact-form-7 id="3d4e383" title="エアコン一括見積LPフォーム（MV）"]'); ?>

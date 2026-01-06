@@ -481,6 +481,9 @@ body {
   padding: 0 min(4vw, 25px);
   margin: auto;
 }
+.contents.-md {
+  width: min(1050px, 100%);
+}
 
 main {
   display: block;
@@ -488,19 +491,6 @@ main {
 @media (min-width: 768px) and (max-width: 769px) and (orientation: portrait) {
   main {
     min-height: 95vh;
-  }
-}
-
-.totop {
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-  cursor: pointer;
-}
-@media (max-width: 767px) {
-  .totop {
-    width: 44px;
-    height: 44px;
   }
 }
 
@@ -540,12 +530,6 @@ main {
   justify-content: center;
 }
 
-.footer--copy {
-  padding: 10px;
-  line-height: 1;
-  text-align: center;
-}
-
 #header,
 #footer_contact,
 #footer,
@@ -559,6 +543,7 @@ main {
 }
 
 .mv {
+  padding: 20px min(4vw, 25px);
   background: #0f88da;
 }
 .mv dt {
@@ -570,33 +555,81 @@ main {
   font-weight: 900;
 }
 .mv strong {
+  box-sizing: border-box;
   display: block;
+  width: fit-content;
+  padding: 10px 20px;
+  margin: auto;
+  font-size: var(--fz40);
+  font-weight: 900;
+  background: #024897;
 }
 .mv strong span {
+  color: #fcff00;
+}
+.mv p {
+  font-size: var(--fz50);
+  font-weight: 900;
+}
+.mv a {
   position: relative;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  max-width: 650px;
+  padding: 15px 10px 15px 75px;
+  overflow: hidden;
+  font-size: 50px;
+  font-weight: 900;
+  color: #fcff00;
+  text-align: center;
+  background: #f11;
+  border: solid 2px #fff;
+  border-radius: 100px;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 8px #f11;
+}
+.mv a::before {
+  position: absolute;
   top: 50%;
-  left: 50%;
+  left: 40px;
   display: inline-block;
-  font-size: 60px;
-  color: #fff;
-  transform: translate(-50%, -50%);
-  -webkit-text-stroke-width: 25px;
+  width: 100px;
+  height: auto;
+  font-size: var(--fz35);
+  color: #f11;
+  content: "無料";
+  background: #fff;
+  border-radius: 1000px;
+  transform: translateY(-50%);
 }
-.mv strong span::before {
+.mv a::after {
   position: absolute;
-  left: 0;
-  z-index: 30;
-  color: #fff;
-  content: attr(data-text);
-  -webkit-text-stroke-width: 0;
+  top: -60px;
+  left: -60px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  content: "";
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9));
+  animation-name: shine-run;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
 }
-.mv strong span::after {
-  position: absolute;
-  left: 0;
-  z-index: 20;
-  color: #000;
-  content: attr(data-text);
-  -webkit-text-stroke-width: 15px;
+@keyframes shine-run {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(50deg);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1) rotate(50deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(250) rotate(50deg);
+  }
 }
 .mv label {
   display: block;
@@ -627,6 +660,9 @@ main {
   color: #fff;
   background: #024897;
   border-radius: 10px;
+}
+.mv--contents {
+  color: #fff;
 }
 
 .voice--inner {

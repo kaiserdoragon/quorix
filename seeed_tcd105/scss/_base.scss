@@ -36,6 +36,10 @@ body {
   width: min(1450px, 100%); // デザインの幅 + padding
   padding: 0 min(4vw, 25px);
   margin: auto;
+
+  &.-md {
+    width: min(1050px, 100%); // デザインの幅 + padding
+  }
 }
 
 main {
@@ -47,21 +51,6 @@ main {
     min-height: 95vh;
   }
 }
-
-.totop {
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-  cursor: pointer;
-
-  // display: none; fadeInを利用するときに必要
-
-  @include max-mq {
-    width: 44px;
-    height: 44px;
-  }
-}
-
 
 // ---------------------------------------------
 //  ヘッダー関連 header
@@ -117,11 +106,3 @@ main {
 //  フッター関連 footer
 // ---------------------------------------------
 
-.footer {
-  // .footer--copy
-  &--copy {
-    padding: 10px;
-    line-height: 1;
-    text-align: center;
-  }
-}
