@@ -916,8 +916,59 @@ main {
   margin-bottom: 40px;
 }
 .point li {
+  position: relative;
   width: calc(33.3333333333% - 20px);
   min-width: 310px;
+}
+.point li:nth-child(1)::before {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  content: "";
+  background: url(../img/ikkatu/point_01.png) no-repeat center/contain;
+}
+.point li:nth-child(2)::before {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  content: "";
+  background: url(../img/ikkatu/point_02.png) no-repeat center/contain;
+}
+.point li:nth-child(3)::before {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  content: "";
+  background: url(../img/ikkatu/point_03.png) no-repeat center/contain;
+}
+.point li:nth-child(4)::before {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  content: "";
+  background: url(../img/ikkatu/point_04.png) no-repeat center/contain;
+}
+.point li:nth-child(5)::before {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  content: "";
+  background: url(../img/ikkatu/point_05.png) no-repeat center/contain;
 }
 .point dl {
   border: 5px solid #004ba6;
@@ -936,6 +987,63 @@ main {
 }
 .point .contents {
   width: min(1150px, 100%);
+}
+
+.cvarea h2 {
+  width: fit-content;
+  padding: 0 30px 10px;
+  margin: 0 auto 60px;
+  font-size: var(--fz40);
+  font-weight: 900;
+  color: #fcff00;
+  border-bottom: 1px solid #fff;
+}
+.cvarea b {
+  position: relative;
+  left: -33px;
+  font-size: var(--fz40);
+  font-weight: 900;
+  color: #f00;
+  -webkit-text-stroke: 8px #fff;
+  paint-order: stroke fill;
+}
+.cvarea li {
+  position: relative;
+  margin-bottom: 30px;
+  font-size: var(--fz25);
+  font-weight: 900;
+  color: #fff;
+}
+.cvarea li:last-child {
+  margin-bottom: 60px;
+}
+.cvarea li::before {
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  content: "";
+  background: url(../img/ikkatu/cv_check.png) no-repeat center center/contain;
+  transform: translateY(-50%);
+}
+.cvarea .header--btns {
+  flex-direction: column;
+}
+.cvarea .header--item {
+  display: block;
+}
+.cvarea .header--item p {
+  font-size: var(--fz30);
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+}
+.cvarea--inner {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
 }
 
 .voice--inner {

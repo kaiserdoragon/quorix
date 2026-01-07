@@ -295,9 +295,48 @@ get_header();
     </div>
   </section>
 
-  <section class="cvarea bg_blue sec">
+  <section class="cvarea bg_blue sec -md">
     <div class="contents">
-      <h2>業務用エアコンの見積りはお任せください。</h2>
+      <h2>エアコンの見積りはお任せください</h2>
+      <div class="cvarea--inner">
+        <div>
+          <ul>
+            <li>どこに頼めばいいか分からない</li>
+            <li>費用やスケジュールだけ知りたい</li>
+            <li>修理だけお願いしたい</li>
+            <li>費用が安いところを探している</li>
+          </ul>
+          <b>まずは一度ご相談ください。</b>
+        </div>
+        <div class="header--btns">
+          <div class="header--item">
+            <p>お急ぎの方はこちら！</p>
+            <a href="tel:052-932-5450" class="cv_button">
+              <picture>
+                <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/cv_tel.avif" type="image/avif">
+                <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/cv_tel.webp" type="image/webp">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/cv_tel.png"
+                  alt="お電話でのご相談はこちら: 052-932-5450"
+                  width="417" height="106"
+                  decoding="async">
+              </picture>
+            </a>
+          </div>
+          <div class="header--item">
+            <p>24時間受付中！</p>
+            <a href="#contact" class="cv_button">
+              <picture>
+                <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/cv_mail.avif" type="image/avif">
+                <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/cv_mail.webp" type="image/webp">
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/cv_mail.png"
+                  alt="メールでお問い合わせ"
+                  width="417" height="102"
+                  decoding="async">
+              </picture>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
