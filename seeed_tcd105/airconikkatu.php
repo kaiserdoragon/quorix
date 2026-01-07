@@ -128,6 +128,7 @@ get_header();
     </div>
   </div>
 </div>
+
 <main>
   <div class="mv">
     <div class="contents">
@@ -151,7 +152,7 @@ get_header();
 
   <section class="flow sec bg_skyblue">
     <div class="contents">
-      <h2>ご利用の流れ<span>かんたん3つのステップ</span></h2>
+      <h2>ご利用の流れ<br><span>かんたん3つのステップ</span></h2>
       <ol>
         <li>
           <dl>
@@ -166,7 +167,7 @@ get_header();
             <dt>②ピッタリの業者を紹介します</dt>
             <dd>
               予算、ご要望、お悩みなどを<br class="is-hidden_sp">
-              詳しくお聞かせください。
+              詳しくお聞かせください。<br>
               現地調査の日程調整をします。
             </dd>
           </dl>
@@ -176,7 +177,7 @@ get_header();
             <dt>③気に入った業者を選んでください</dt>
             <dd>
               見積もりを受け取り、<br class="is-hidden_sp">
-              比較してご検討ください。
+              比較してご検討ください。<br>
               すべて見送ってもかまいません。
             </dd>
           </dl>
@@ -185,17 +186,111 @@ get_header();
     </div>
   </section>
 
-  <section class="">
+  <section class="worry sec -md">
+    <div class="contents">
+      <h2>こんな<span class="worry--dots">お悩み</span>ありませんか？？</h2>
+      <ol>
+        <li>
+          エアコンが古くて<br class="is-hidden_sp">
+          電気代が高い...
+        </li>
+        <li>
+          複数の業者に見積り<br class="is-hidden_sp">
+          依頼するのが面倒
+        </li>
+        <li>
+          すぐ対応してくれる<br class="is-hidden_sp">
+          業者が見つからない
+        </li>
+        <li>
+          夏場の冷房が効かず<br class="is-hidden_sp">
+          従業員・お客様から苦情
+        </li>
+        <li>
+          見積りの取り方が<br class="is-hidden_sp">
+          よくわからない
+        </li>
+        <li>
+          見積りが高いのか<br class="is-hidden_sp">
+          安いのか判断できない
+        </li>
+      </ol>
+      <b>業務用エアコンの見積り、<br>1社だけで決めていませんか?</b>
+      <p>業者選びで<span>数十万円</span>の差が出ることも...</p>
+    </div>
+  </section>
+
+  <section class="point sec">
     <div class="contents">
       <p>当サービスが全て解決します</p>
-      <p>優良業者のみをご紹介</p>
-      <h2>エアコン業者が<span>最短当日・即日</span>で見つかります</h2>
+      <b>優良業者のみをご紹介</b>
+      <h2>エアコン業者が<br><span>最短当日・即日</span>で見つかります</h2>
       <ol>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>
+          <dl>
+            <dt>
+              完全無料で<br>
+              複数社の見積り比較
+            </dt>
+            <dd>
+              現地調査費、見積り作成費、出張費、<br>
+              キャンセル料、全て０円<br>
+              負担は一切ありません
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>
+              東海4県特化で<br>
+              最短当日対応
+            </dt>
+            <dd>
+              お問い合わせ後、即日で業者選定<br>
+              最短で当日中に現地調査可能<br>
+              地域を知り尽くした業者だから安心
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>
+              中立的な立場で<br>
+              サポート
+            </dt>
+            <dd>
+              押し売り一切なし<br>
+              複数社検討後、他社に決めてもOK<br>
+              不明点があればいつでも相談可能
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>
+              厳選業者<br>
+              のみをご紹介
+            </dt>
+            <dd>
+              実績5年以上・施工保険加入済み<br>
+              トラブル・クレーム率1%未満<br>
+              常に高品質な施工業者のみをご紹介
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>
+              アフター保証<br>
+              も万全
+            </dt>
+            <dd>
+              施工業者とトラブルが発生した場合<br>
+              当社が責任を持って対応・解決<br>
+              長期的な安心をお約束
+            </dd>
+          </dl>
+        </li>
       </ol>
     </div>
   </section>

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 :root {
   --invariants: 2.5;
   --fz10: min(calc(0.1rem * 10), calc(0.1vw * 10 * var(--invariants)));
@@ -227,7 +227,7 @@
 }
 
 .u-color-body {
-  color: #000;
+  color: #333;
 }
 
 .u-color-primary {
@@ -462,7 +462,7 @@ body {
   font-size: var(--fz18);
   font-weight: 500;
   line-height: 1.6;
-  color: #000;
+  color: #333;
 }
 
 .wrap {
@@ -576,7 +576,7 @@ main {
   font-weight: 900;
 }
 .mv p:last-of-type {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 .mv b {
   display: flex;
@@ -640,13 +640,6 @@ main {
   background: #f00;
   border-radius: 50%;
 }
-.mv .contents {
-  position: relative;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  padding: 20px min(4vw, 25px);
-}
 .mv .contact_form--btn {
   display: unset;
   width: auto;
@@ -661,12 +654,18 @@ main {
   background: unset;
   border: none;
 }
+.mv .contents {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 60px min(4vw, 25px);
+}
 .mv--num {
   font-size: var(--fz85);
   font-weight: 900;
   color: #f00;
   letter-spacing: 5px;
-  content: counter(num, decimal-leading-zero);
   -webkit-text-stroke: 8px #fff;
   paint-order: stroke fill;
 }
@@ -683,7 +682,7 @@ main {
   width: 100%;
   max-width: 650px;
   padding: 15px 10px 15px 75px;
-  margin: 0 auto 40px;
+  margin: 0 auto 60px;
   overflow: hidden;
   font-size: 50px;
   font-weight: 900;
@@ -756,10 +755,187 @@ main {
   text-align: center;
 }
 
+.flow h2 {
+  margin-bottom: 60px;
+  font-size: var(--fz40);
+  font-weight: 900;
+  text-align: center;
+}
+.flow h2 span {
+  color: #f00;
+}
 .flow ol {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.flow li:nth-child(1) dt {
+  background: #78c4ee;
+}
+.flow li:nth-child(2) dt {
+  background: #8ad3ee;
+}
+.flow li:nth-child(3) dt {
+  background: #6bd3e6;
+}
+.flow dt {
+  padding: 10px;
+  font-size: var(--fz20);
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+.flow dd {
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+}
+.flow .contents {
+  width: min(1150px, 100%);
+}
+
+.worry {
+  background: url(../img/ikkatu/bg_worry.jpg) no-repeat center center/cover;
+}
+.worry h2 {
+  margin-bottom: 60px;
+  font-size: var(--fz60);
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+}
+.worry ol {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 40px;
+}
+.worry li {
+  position: relative;
+  padding: 10px 0 10px 75px;
+  font-size: var(--fz25);
+  font-weight: 900;
+  color: #f00;
+  background: #fff;
+}
+.worry li::before {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  content: "";
+  background: url(../img/ikkatu/icon_check.png) no-repeat center center/contain;
+  transform: translateY(-50%);
+}
+.worry b {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+}
+.worry p {
+  font-size: var(--fz45);
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+}
+.worry p span {
+  font-size: var(--fz60);
+  color: #f00;
+}
+.worry .contents {
+  width: min(1150px, 100%);
+}
+.worry--dots {
+  padding-top: 15px;
+  color: #fcff00;
+  background-image: radial-gradient(circle at center, #fcff00 20%, transparent 20%);
+  background-repeat: repeat-x;
+  background-position: top right;
+  background-size: 1em 0.3em;
+}
+
+.point p {
+  position: relative;
+  width: fit-content;
+  padding: 0 70px;
+  margin: 0 auto 40px;
+  font-size: var(--fz45);
+  font-weight: 900;
+}
+.point p::before, .point p::after {
+  position: absolute;
+  bottom: 10px;
+  display: inline-block;
+  width: 51px;
+  height: 47px;
+  content: "";
+}
+.point p::before {
+  left: 0;
+  background: url(../img/ikkatu/icon_kyoutyou_left.png) no-repeat center/contain;
+}
+.point p::after {
+  right: 0;
+  background: url(../img/ikkatu/icon_kyoutyou_right.png) no-repeat center/contain;
+}
+.point b {
+  display: block;
+  width: fit-content;
+  padding: 0 15px;
+  margin: 0 auto 30px;
+  font-size: var(--fz40);
+  font-weight: 900;
+  color: #f00;
+  background: linear-gradient(to bottom, transparent 0%, transparent 70%, #fff100 70%, #fff100 100%);
+}
+.point h2 {
+  margin-bottom: 40px;
+  font-size: var(--fz50);
+  font-weight: 900;
+  line-height: 1.3;
+  color: #004ba6;
+  text-align: center;
+}
+.point h2 span {
+  font-size: var(--fz70);
+  font-weight: 900;
+  color: #fcff00;
+  -webkit-text-stroke: 10px #333;
+  paint-order: stroke fill;
+}
+.point ol {
+  display: flex;
+  flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.point li {
+  width: calc(33.3333333333% - 20px);
+  min-width: 310px;
+}
+.point dl {
+  border: 5px solid #004ba6;
+}
+.point dt {
+  padding: 10px 0;
+  font-size: var(--fz23);
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  background: #004ba6;
+}
+.point dd {
+  padding: 20px 10px;
+  text-align: center;
+}
+.point .contents {
+  width: min(1150px, 100%);
 }
 
 .voice--inner {

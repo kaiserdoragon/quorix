@@ -4,10 +4,10 @@
 // ---------------------------------------------
 // ここから変数
 // ---------------------------------------------
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 
 // color
-$color-body: #000; // 本文のテキスト用
+$color-body: #333; // 本文のテキスト用
 $color-primary: #008080; // サイト内で１番よく使う色、ベースカラー
 $color-secondary: #fafad2; // サイト内で２番目に使う色、サブカラー
 $color-accent: #ff6347; // サイト内で３番目に使う色、アクセントカラー
