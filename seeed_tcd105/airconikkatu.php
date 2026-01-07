@@ -460,8 +460,7 @@ get_header();
       </ol>
       <b>業者が確定したら、ご指定いただいた日時に作業を行います。<br>
         作業が完了しましたら、請求金額を作業員へお渡しください。</b>
-      <span>※業者によってはクレジットカードや請求書払いに対応しているところもあります。</span>
-      <p>現金払い以外でのお支払いをご希望の方は、お見積りの際にお伝えください。</p>
+      <span>※業者によってはクレジットカードや請求書払いに対応しているところもあります。<br>現金払い以外でのお支払いをご希望の方は、お見積りの際にお伝えください。</span>
     </div>
   </section>
 
@@ -576,11 +575,23 @@ get_header();
   <section class="contact sec" id="contact">
     <div class="contents">
       <h2 class="ttl">お問い合わせフォーム</h2>
+      <strong>無料見積りはこちら</strong>
       <p class="contact--lead">
-        料金の目安を知りたい方・具体的な日程のご相談をされたい方は、<br class="is-hidden_sp">
-        こちらのフォームからご連絡ください。<br>
-        無料でお見積もり・ご提案いたします。
+        ご相談・お見積り・キャンセルまで完全無料ですので、<br class="is-hidden_sp">
+        まずはお気軽にお問い合わせください。
       </p>
+      <div class="thanks--tel">
+        <a href="tel:052-932-5450" class="cv_button">
+          <picture>
+            <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.avif" type="image/avif">
+            <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.webp" type="image/webp">
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.png"
+              alt="お電話でのご相談はこちら: 052-932-5450"
+              width="355" height="90"
+              decoding="async">
+          </picture>
+        </a>
+      </div>
       <?php echo apply_shortcodes('[contact-form-7 id="aa1eb3f" title="エアコン一括見積LPフォーム（フッター）"]'); ?>
     </div>
   </section>

@@ -78,6 +78,11 @@ main {
     align-items: center;
     justify-content: space-between;
     padding: 25px 0;
+
+    @media (width <= 1280px) {
+      gap: 20px;
+      justify-content: center;
+    }
   }
 
   // .header--btns
@@ -106,3 +111,8 @@ main {
 //  フッター関連 footer
 // ---------------------------------------------
 
+.footer {
+  padding: 60px 0;
+  color: #fff;
+  text-align: center;
+}

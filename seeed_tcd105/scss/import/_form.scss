@@ -15,13 +15,24 @@ span.wpcf7-list-item {
 }
 
 .contact {
+  strong {
+    display: block;
+    margin-bottom: 15px;
+    font-size: var(--fz40);
+    font-weight: 900;
+    color: rgb(252 255 0);
+    text-align: center;
+    paint-order: stroke;
+    -webkit-text-stroke: 7px rgb(51 51 51);
+  }
+
   .thanks--tel {
     margin: 0 auto 60px;
   }
 
   // .contact--lead
   &--lead {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     font-size: var(--fz20);
     font-weight: 600;
     text-align: center;
@@ -185,8 +196,9 @@ span.wpcf7-list-item {
   // .contact_form--btn
   &--btn {
     display: block;
-    width: 250px;
-    padding: 10px 0;
+    width: 100%;
+    max-width: 400px;
+    padding: 15px 0;
     margin: 60px auto 0;
     overflow: hidden;
     font-size: var(--fz24);

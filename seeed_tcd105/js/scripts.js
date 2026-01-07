@@ -2,15 +2,15 @@
 
 console.log("エアコン一括見積");
 
-window.addEventListener("DOMContentLoaded", function () {
-  new ScrollHint(".js-scrollable", {
-    scrollHintIconAppendClass: "scroll-hint-icon-white",
-    suggestiveShadow: true,
-    i18n: {
-      scrollable: "スクロールできます",
-    },
-  });
-});
+// window.addEventListener("DOMContentLoaded", function () {
+//   new ScrollHint(".js-scrollable", {
+//     scrollHintIconAppendClass: "scroll-hint-icon-white",
+//     suggestiveShadow: true,
+//     i18n: {
+//       scrollable: "スクロールできます",
+//     },
+//   });
+// });
 
 // SP(<=767px)のときだけフッター追従ボタンを有効化
 (() => {
