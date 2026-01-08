@@ -76,10 +76,8 @@ console.log("エアコン一括見積");
     });
   });
 
-  // PC(>=768px)のときだけスクロールで出現するヘッダーを有効化
+  // どのデバイス幅でもスクロールで出現するヘッダーを有効化
   $(function () {
-    var mql = window.matchMedia("(min-width: 768px)");
-
     var $win = $(window);
     var $header = $("#js-fixed-header");
     var $main = $("main");
@@ -122,30 +120,18 @@ console.log("エアコン一括見積");
     function enable() {
       if (enabled) return;
       enabled = true;
+
       recalcThreshold();
       $win.on("scroll.fixedHeader", onScroll);
       $win.on("resize.fixedHeader", recalcThreshold);
+
+      // 画像読み込み等で main の位置が変わるケースがあるなら保険で
+      $win.on("load.fixedHeader", recalcThreshold);
     }
 
-    function disable() {
-      if (!enabled) return;
-      enabled = false;
-      $win.off(".fixedHeader");
-      $header.removeClass("is-visible is-ready");
-      initialized = false;
-    }
-
-    function check() {
-      if (mql.matches) enable();
-      else disable();
-    }
-
-    check();
-
-    if (mql.addEventListener) {
-      mql.addEventListener("change", check);
-    } else if (mql.addListener) {
-      mql.addListener(check);
-    }
+    // matchMedia による分岐をやめて常に有効化
+    enable();
   });
+
+
 })(jQuery, this);
