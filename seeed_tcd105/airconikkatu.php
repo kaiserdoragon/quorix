@@ -215,14 +215,14 @@ get_header();
           安いのか判断できない
         </li>
       </ol>
-      <b>業務用エアコンの見積り、<br>1社だけで決めていませんか?</b>
+      <b>業務用エアコンの見積り、<br class="is-hidden_sp">1社だけで決めていませんか?</b>
       <p>業者選びで<span>数十万円</span>の差が出ることも...</p>
     </div>
   </section>
 
   <section class="point sec">
     <div class="contents">
-      <p>当サービスが全て解決します</p>
+      <p>当サービスが<br class="is-hidden_pc">全て解決します</p>
       <b>優良業者のみをご紹介</b>
       <h2>エアコン業者が<br><span>最短当日・即日</span>で見つかります</h2>
       <ol>

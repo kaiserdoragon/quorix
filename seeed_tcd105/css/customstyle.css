@@ -781,7 +781,7 @@ main {
 }
 @media (width <= 1280px) {
   .mv--link {
-    max-width: 490px;
+    max-width: 360px;
     padding: 15px 10px 15px 90px;
     font-size: var(--fz40);
   }
@@ -815,6 +815,17 @@ main {
     font-size: var(--fz14);
   }
 }
+@media (width <= 480px) {
+  .mv--link {
+    max-width: 300px;
+    padding: 15px 10px 15px 70px;
+    font-size: var(--fz22);
+  }
+  .mv--link::before {
+    left: 20px;
+    font-size: var(--fz16);
+  }
+}
 .mv--contents {
   width: 56%;
   color: #fff;
@@ -840,6 +851,7 @@ main {
 @media (width <= 1024px) {
   .mv .contents {
     flex-direction: column;
+    gap: 30px;
     align-items: center;
   }
 }
@@ -852,9 +864,6 @@ main {
   }
   .mv b {
     font-size: var(--fz20);
-  }
-  .mv .contents {
-    gap: 30px;
   }
 }
 
@@ -896,6 +905,14 @@ main {
 .flow .contents {
   width: min(1150px, 100%);
 }
+@media (max-width: 767px) {
+  .flow h2 {
+    font-size: var(--fz30);
+  }
+  .flow ol {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 .worry {
   background: url(../img/ikkatu/bg_worry.jpg) no-repeat center center/cover;
@@ -915,8 +932,8 @@ main {
 }
 .worry li {
   position: relative;
-  padding: 10px 0 10px 75px;
-  font-size: var(--fz25);
+  padding: 20px 0 20px 80px;
+  font-size: var(--fz23);
   font-weight: 900;
   color: #f00;
   background: #fff;
@@ -935,7 +952,7 @@ main {
 .worry b {
   display: block;
   margin-bottom: 30px;
-  font-size: 40px;
+  font-size: var(--fz40);
   font-weight: 900;
   color: #fff;
   text-align: center;
@@ -960,6 +977,26 @@ main {
   background-repeat: repeat-x;
   background-position: top right;
   background-size: 1em 0.3em;
+}
+@media (max-width: 767px) {
+  .worry h2 {
+    font-size: var(--fz45);
+  }
+  .worry b {
+    font-size: var(--fz35);
+  }
+  .worry ol {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .worry li {
+    padding: 20px 20px 20px 55px;
+    font-size: var(--fz23);
+  }
+  .worry li::before {
+    left: 20px;
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .point p {
@@ -1091,6 +1128,40 @@ main {
 .point .contents {
   width: min(1150px, 100%);
 }
+@media (max-width: 767px) {
+  .point p {
+    padding: 0;
+    font-size: var(--fz35);
+    text-align: center;
+  }
+  .point p::before, .point p::after {
+    bottom: 10px;
+    width: 35px;
+    height: 31px;
+  }
+  .point p::before {
+    left: -40px;
+  }
+  .point p::after {
+    right: -40px;
+  }
+  .point b {
+    font-size: var(--fz32);
+    text-align: center;
+  }
+  .point h2 {
+    font-size: var(--fz40);
+    line-height: 1.6;
+  }
+  .point h2 span {
+    display: block;
+    font-size: var(--fz51);
+    -webkit-text-stroke: 8px #333;
+  }
+  .point li {
+    min-width: 100%;
+  }
+}
 
 .cvarea h2 {
   width: fit-content;
@@ -1145,8 +1216,23 @@ main {
 }
 .cvarea--inner {
   display: flex;
+  flex-wrap: wrap;
   gap: 60px;
   justify-content: center;
+}
+@media (max-width: 767px) {
+  .cvarea h2 {
+    padding: 0 5px 15px;
+    text-align: center;
+  }
+  .cvarea b {
+    left: 0;
+    display: block;
+    text-align: center;
+  }
+  .cvarea ul {
+    padding-left: 45px;
+  }
 }
 
 .voice--inner {
