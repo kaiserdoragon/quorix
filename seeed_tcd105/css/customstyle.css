@@ -494,6 +494,10 @@ main {
   }
 }
 
+.header--logo p {
+  font-weight: 900;
+  text-align: center;
+}
 .header--catch {
   padding: 10px 0;
   font-size: var(--fz23);
@@ -504,6 +508,11 @@ main {
 }
 .header--catch span {
   color: #ffea00;
+}
+@media (max-width: 767px) {
+  .header--catch span {
+    display: block;
+  }
 }
 .header--inner {
   display: flex;
@@ -803,27 +812,38 @@ main {
     font-size: var(--fz22);
   }
   .mv--link.-sm {
-    width: 100%;
+    width: 320px;
     max-width: unset;
     padding: 12px 10px 15px 55px;
     font-size: var(--fz22);
   }
   .mv--link.-sm::before {
     left: 25px;
-    width: 35px;
+    width: 3em;
     padding: 5px 3px;
     font-size: var(--fz14);
   }
 }
 @media (width <= 480px) {
   .mv--link {
-    max-width: 300px;
+    width: 90%;
+    max-width: none;
     padding: 15px 10px 15px 70px;
-    font-size: var(--fz22);
+    font-size: var(--fz25);
   }
   .mv--link::before {
     left: 20px;
-    font-size: var(--fz16);
+    width: 3em;
+    font-size: var(--fz23);
+  }
+  .mv--link.-sm {
+    width: 100%;
+  }
+  .mv--link.-sm::before {
+    left: 15px;
+    width: 3em;
+    padding: 5px 3px;
+    font-size: var(--fz18);
   }
 }
 .mv--contents {
@@ -857,7 +877,7 @@ main {
 }
 @media (max-width: 767px) {
   .mv dt {
-    font-size: var(--fz23);
+    font-size: var(--fz20);
   }
   .mv dd {
     font-size: var(--fz35);
@@ -996,6 +1016,12 @@ main {
     left: 20px;
     width: 20px;
     height: 20px;
+  }
+  .worry p {
+    font-size: var(--fz40);
+  }
+  .worry p span {
+    display: block;
   }
 }
 
@@ -1483,6 +1509,9 @@ span.wpcf7-list-item {
   margin-bottom: 40px;
   font-size: var(--fz20);
   font-weight: 600;
+  text-align: center;
+}
+.contact--lead + p {
   text-align: center;
 }
 @media (max-width: 767px) {

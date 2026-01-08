@@ -57,6 +57,14 @@ main {
 // ---------------------------------------------
 
 .header {
+  // .header--logo
+  &--logo {
+    p {
+      font-weight: 900;
+      text-align: center;
+    }
+  }
+
   // .header--catch
   &--catch {
     padding: 10px 0;
@@ -68,6 +76,12 @@ main {
 
     span {
       color: #ffea00;
+    }
+
+    @include max-mq {
+      span {
+        display: block;
+      }
     }
   }
 

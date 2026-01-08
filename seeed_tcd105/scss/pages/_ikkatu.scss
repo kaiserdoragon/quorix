@@ -304,14 +304,14 @@
       }
 
       &.-sm {
-        width: 100%;
+        width: 320px;
         max-width: unset;
         padding: 12px 10px 15px 55px;
         font-size: var(--fz22);
 
         &::before {
           left: 25px;
-          width: 35px;
+          width: 3em;
           padding: 5px 3px;
           font-size: var(--fz14);
         }
@@ -319,13 +319,26 @@
     }
 
     @media (width <= 480px) {
-      max-width: 300px;
+      width: 90%;
+      max-width: none;
       padding: 15px 10px 15px 70px;
-      font-size: var(--fz22);
+      font-size: var(--fz25);
 
       &::before {
         left: 20px;
-        font-size: var(--fz16);
+        width: 3em;
+        font-size: var(--fz23);
+      }
+
+      &.-sm {
+        width: 100%;
+
+        &::before {
+          left: 15px;
+          width: 3em;
+          padding: 5px 3px;
+          font-size: var(--fz18);
+        }
       }
     }
   }
@@ -366,7 +379,7 @@
 
   @include max-mq {
     dt {
-      font-size: var(--fz23);
+      font-size: var(--fz20);
     }
 
     dd {
@@ -541,6 +554,14 @@
         left: 20px;
         width: 20px;
         height: 20px;
+      }
+    }
+
+    p {
+      font-size: var(--fz40);
+
+      span {
+        display: block;
       }
     }
   }

@@ -1,6 +1,6 @@
 "use strict";
 
-console.log("エアコン一括見積");
+// console.log("エアコン一括見積");
 
 // window.addEventListener("DOMContentLoaded", function () {
 //   new ScrollHint(".js-scrollable", {
