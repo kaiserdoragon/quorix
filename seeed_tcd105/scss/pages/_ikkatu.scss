@@ -31,9 +31,13 @@
   }
 
   dd {
-    margin-bottom: 10px;
-    font-size: var(--fz43);
+    margin-bottom: 15px;
+    font-size: var(--fz40);
     font-weight: 900;
+
+    &:first-of-type {
+      color: #fcff00;
+    }
   }
 
   strong {
@@ -281,7 +285,7 @@
     }
 
     @media (width <= 1280px) {
-      max-width: 360px;
+      max-width: 12.5em;
       padding: 15px 10px 15px 90px;
       font-size: var(--fz40);
 
@@ -383,10 +387,14 @@
     }
 
     dd {
-      font-size: var(--fz35);
+      font-size: var(--fz30);
     }
 
     b {
+      font-size: var(--fz20);
+    }
+
+    strong {
       font-size: var(--fz20);
     }
   }

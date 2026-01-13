@@ -136,6 +136,7 @@ get_header();
         <dl>
           <dt>愛知県・岐阜県・三重県対応</dt>
           <dd>優良業者のみをご紹介</dd>
+          <dd>家庭用から業務用まで<br>エアコンの修理・クリーニング・掃除のお見積り！</dd>
         </dl>
         <img src="<?php echo get_template_directory_uri(); ?>/img/ikkatu/mv_txt_01.png" alt="エアコンのトラブルを" width="609" height="88">
         <strong>最短当日対応の<span>一括見積り</span>で解決!!</strong>
