@@ -31,7 +31,7 @@ $ld_json = [
     'addressLocality' => '名古屋市東区',
     'streetAddress'   => '3-3-8 SLX葵ビル4F 404',
   ],
-  'areaServed' => ['愛知県', '岐阜県', '三重県', '静岡県'],
+  'areaServed' => ['愛知県', '岐阜県', '三重県'],
 ];
 
 add_action('wp_head', static function () use ($ld_json) {
@@ -55,7 +55,7 @@ get_header();
   <div class="contents">
     <div class="header--inner">
       <section class="header--logo">
-        <p>エアコンの一括見積サイトの端的な説明文</p>
+        <p>東海3県で最短当日！無料一括見積</p>
         <a href="<?php echo esc_url(home_url('/ikkatu/')); ?>">
           <h1>
             <picture>
