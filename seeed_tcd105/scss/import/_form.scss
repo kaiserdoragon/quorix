@@ -38,6 +38,9 @@ span.wpcf7-list-item {
     text-align: center;
 
     +p {
+      font-size: var(--fz20);
+      font-weight: 900;
+      color: #f00;
       text-align: center;
     }
 
@@ -92,7 +95,7 @@ span.wpcf7-list-item {
     }
   }
 
-  // contact_form--table
+  // .contact_form--table
   &--table {
     max-width: 900px;
     margin: auto;
@@ -181,7 +184,7 @@ span.wpcf7-list-item {
         margin-bottom: 5px;
 
         &::after {
-          right: -75px;
+          right: -50px;
           font-size: var(--fz14);
         }
       }

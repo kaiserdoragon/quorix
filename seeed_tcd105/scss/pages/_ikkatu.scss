@@ -32,7 +32,7 @@
 
   dd {
     margin-bottom: 15px;
-    font-size: var(--fz40);
+    font-size: var(--fz38);
     font-weight: 900;
 
     &:first-of-type {
@@ -387,6 +387,7 @@
     }
 
     dd {
+      margin-bottom: 30px;
       font-size: var(--fz30);
     }
 
@@ -421,19 +422,19 @@
   li {
     &:nth-child(1) {
       dt {
-        background: #78c4ee;
+        background: #00a4ff;
       }
     }
 
     &:nth-child(2) {
       dt {
-        background: #8ad3ee;
+        background: #00baff;
       }
     }
 
     &:nth-child(3) {
       dt {
-        background: #6bd3e6;
+        background: #00bddf;
       }
     }
   }

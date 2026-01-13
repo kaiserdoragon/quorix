@@ -580,7 +580,7 @@ main {
 }
 .mv dd {
   margin-bottom: 15px;
-  font-size: var(--fz40);
+  font-size: var(--fz38);
   font-weight: 900;
 }
 .mv dd:first-of-type {
@@ -887,6 +887,7 @@ main {
     font-size: var(--fz20);
   }
   .mv dd {
+    margin-bottom: 30px;
     font-size: var(--fz30);
   }
   .mv b {
@@ -912,13 +913,13 @@ main {
   gap: 15px;
 }
 .flow li:nth-child(1) dt {
-  background: #78c4ee;
+  background: #00a4ff;
 }
 .flow li:nth-child(2) dt {
-  background: #8ad3ee;
+  background: #00baff;
 }
 .flow li:nth-child(3) dt {
-  background: #6bd3e6;
+  background: #00bddf;
 }
 .flow dt {
   padding: 10px;
@@ -1522,6 +1523,9 @@ span.wpcf7-list-item {
   text-align: center;
 }
 .contact--lead + p {
+  font-size: var(--fz20);
+  font-weight: 900;
+  color: #f00;
   text-align: center;
 }
 @media (max-width: 767px) {
@@ -1639,7 +1643,7 @@ span.wpcf7-list-item {
     margin-bottom: 5px;
   }
   .contact_form--table th::after {
-    right: -75px;
+    right: -50px;
     font-size: var(--fz14);
   }
   .contact_form--table td {
