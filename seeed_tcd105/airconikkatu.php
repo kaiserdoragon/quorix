@@ -31,7 +31,7 @@ $ld_json = [
     'addressLocality' => '名古屋市東区',
     'streetAddress'   => '3-3-8 SLX葵ビル4F 404',
   ],
-  'areaServed' => ['愛知県', '岐阜県', '三重県', '静岡県'],
+  'areaServed' => ['愛知県', '岐阜県', '三重県'],
 ];
 
 add_action('wp_head', static function () use ($ld_json) {
@@ -55,7 +55,7 @@ get_header();
   <div class="contents">
     <div class="header--inner">
       <section class="header--logo">
-        <p>東海4県で最短当日！無料一括見積</p>
+        <p>東海3県で最短当日！無料一括見積</p>
         <a href="<?php echo esc_url(home_url('/ikkatu/')); ?>">
           <h1>
             <picture>
@@ -134,7 +134,7 @@ get_header();
     <div class="contents">
       <div class="mv--contents">
         <dl>
-          <dt>愛知県・岐阜県・三重県・静岡県対応</dt>
+          <dt>愛知県・岐阜県・三重県対応</dt>
           <dd>優良業者のみをご紹介</dd>
         </dl>
         <img src="<?php echo get_template_directory_uri(); ?>/img/ikkatu/mv_txt_01.png" alt="エアコンのトラブルを" width="609" height="88">
@@ -242,7 +242,7 @@ get_header();
         <li>
           <dl>
             <dt>
-              東海4県特化で<br>
+              東海3県特化で<br>
               最短当日対応
             </dt>
             <dd>
