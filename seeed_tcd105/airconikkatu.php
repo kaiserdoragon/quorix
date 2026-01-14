@@ -536,7 +536,9 @@ get_header();
       <strong>無料見積りはこちら</strong>
       <p class="contact--lead">
         ご相談・お見積り・キャンセルまで完全無料ですので、<br class="is-hidden_sp">
-        まずはお気軽にお問い合わせください。
+        まずはお気軽にお問い合わせください。<br>
+        最短でご連絡させて頂きます。
+      </p>
       </p>
       <?php echo apply_shortcodes('[contact-form-7 id="aa1eb3f" title="エアコン一括見積LPフォーム（フッター）"]'); ?>
     </div>
