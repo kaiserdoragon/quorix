@@ -61,6 +61,10 @@ main {
 // ---------------------------------------------
 
 .header {
+  .contents {
+    width: min(1250px, 100%);
+  }
+
   // .header--logo
   &--logo {
     p {

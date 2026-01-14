@@ -31,7 +31,7 @@ $ld_json = [
     'addressLocality' => '名古屋市東区',
     'streetAddress'   => '3-3-8 SLX葵ビル4F 404',
   ],
-  'areaServed' => ['愛知県', '岐阜県', '三重県'],
+  'areaServed' => ['愛知県', '岐阜県', '三重県', '静岡県'],
 ];
 
 add_action('wp_head', static function () use ($ld_json) {
@@ -73,18 +73,6 @@ get_header();
       </section>
       <div class="header--btns">
         <div class="header--item">
-          <a href="tel:052-932-5450" class="cv_button">
-            <picture>
-              <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.avif" type="image/avif">
-              <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.webp" type="image/webp">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.png"
-                alt="お電話でのご相談はこちら: 052-932-5450"
-                width="327" height="82"
-                decoding="async">
-            </picture>
-          </a>
-        </div>
-        <div class="header--item">
           <a href="#contact" class="cv_button">
             <picture>
               <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/mail.avif" type="image/avif">
@@ -102,18 +90,6 @@ get_header();
 </header>
 <div id="js-fixed-header" class="fixed-header">
   <div class="header--btns">
-    <div class="header--btn-item">
-      <a href="tel:052-932-5450" class="cv_button gtm-click-tel">
-        <picture>
-          <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.avif" type="image/avif">
-          <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.webp" type="image/webp">
-          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.png"
-            alt="お電話でのご相談はこちら: 052-932-5450"
-            width="327" height="82"
-            decoding="async">
-        </picture>
-      </a>
-    </div>
     <div class="header--btn-item">
       <a href="#contact" class="cv_button gtm-click-mail">
         <picture>
@@ -134,7 +110,7 @@ get_header();
     <div class="contents">
       <div class="mv--contents">
         <dl>
-          <dt>愛知県・岐阜県・三重県対応</dt>
+          <dt>愛知県・岐阜県・三重県・岐阜県対応</dt>
           <dd>優良業者のみをご紹介</dd>
           <dd>家庭用から業務用まで<br>エアコンの修理・クリーニングのお見積り！</dd>
         </dl>
@@ -310,19 +286,6 @@ get_header();
           <b>まずは一度ご相談ください。</b>
         </div>
         <div class="header--btns">
-          <div class="header--item">
-            <p>お急ぎの方はこちら！</p>
-            <a href="tel:052-932-5450" class="cv_button">
-              <picture>
-                <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/cv_tel.avif" type="image/avif">
-                <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/cv_tel.webp" type="image/webp">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/cv_tel.png"
-                  alt="お電話でのご相談はこちら: 052-932-5450"
-                  width="417" height="106"
-                  decoding="async">
-              </picture>
-            </a>
-          </div>
           <div class="header--item">
             <p>24時間受付中！</p>
             <a href="#contact" class="cv_button">
@@ -575,26 +538,12 @@ get_header();
         ご相談・お見積り・キャンセルまで完全無料ですので、<br class="is-hidden_sp">
         まずはお気軽にお問い合わせください。
       </p>
-      <p>お急ぎの方は下記までお電話ください</p>
-      <div class="thanks--tel">
-        <a href="tel:052-932-5450" class="cv_button">
-          <picture>
-            <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.avif" type="image/avif">
-            <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.webp" type="image/webp">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.png"
-              alt="お電話でのご相談はこちら: 052-932-5450"
-              width="355" height="90"
-              decoding="async">
-          </picture>
-        </a>
-      </div>
       <?php echo apply_shortcodes('[contact-form-7 id="aa1eb3f" title="エアコン一括見積LPフォーム（フッター）"]'); ?>
     </div>
   </section>
 </main>
 
 <div class="footer_btn_fixed" id="js_fixed-btn">
-  <p class="footer_btn_fixed--tel"><a href="tel:052-932-5450">電話で予約する</a></p>
   <p class="footer_btn_fixed--mail"><a href="#contact">メールで無料見積り</a></p>
 </div>
 
