@@ -2,43 +2,6 @@
 /*
 Template Name: エアコン見積り一括LPのサンクスページ
 */
-defined('ABSPATH') || exit;
-
-/**
- * JSON-LD（構造化データ）
- * - microdataは使わずJSON-LDのみ
- * - URLは esc_url_raw()（表示用のエンティティ変換をしない）
- * - wp_head に出力
- */
-$home_url = esc_url_raw(home_url('/'));
-
-$logo_url = esc_url_raw(get_theme_file_uri('/img/ikkatu/logo.png'));
-$mv_url   = esc_url_raw(get_theme_file_uri('/img/ikkatu/mv.jpg'));
-
-$ld_json = [
-  '@context'   => 'https://schema.org',
-  '@type'      => 'LocalBusiness',
-  '@id'        => $home_url . '#localbusiness',
-  'name'       => '株式会社QUORIX',
-  'url'        => $home_url,
-  'telephone'  => '+81-52-932-5450',
-  'logo'       => $logo_url,
-  'image'      => [$mv_url],
-  'address'    => [
-    '@type'           => 'PostalAddress',
-    'postalCode'      => '461-0002',
-    'addressRegion'   => '愛知県',
-    'addressLocality' => '名古屋市東区',
-    'streetAddress'   => '3-3-8 SLX葵ビル4F 404',
-  ],
-  'areaServed' => ['愛知県', '岐阜県', '三重県'],
-];
-
-add_action('wp_head', static function () use ($ld_json) {
-  echo "\n" . '<script type="application/ld+json">'
-    . wp_json_encode($ld_json, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)
-    . '</script>' . "\n";
-}, 1);
 
 get_header();
 ?>
@@ -60,10 +23,10 @@ get_header();
           <h1>
             <picture>
               <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/logo.avif" type="image/avif">
-              <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/img/logo.webp" type="image/webp">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/img/logo.png"
+              <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/logo.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/logo.png"
                 alt="東海エアコン見積ナビ"
-                width="379" height="63"
+                width="414" height="62"
                 fetchpriority="high"
                 loading="eager"
                 decoding="async">
@@ -73,19 +36,7 @@ get_header();
       </section>
       <div class="header--btns">
         <div class="header--item">
-          <a href="tel:052-932-5450">
-            <picture>
-              <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.avif" type="image/avif">
-              <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.webp" type="image/webp">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.png"
-                alt="お電話でのご相談はこちら: 052-932-5450"
-                width="327" height="82"
-                decoding="async">
-            </picture>
-          </a>
-        </div>
-        <div class="header--item">
-          <a href="#contact">
+          <a href="#contact" class="cv_button">
             <picture>
               <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/mail.avif" type="image/avif">
               <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/mail.webp" type="image/webp">

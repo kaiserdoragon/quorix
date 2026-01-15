@@ -4,34 +4,157 @@ Template Name: エアコン見積り一括LP
 */
 defined('ABSPATH') || exit;
 
-/**
- * JSON-LD（構造化データ）
- * - microdataは使わずJSON-LDのみ
- * - URLは esc_url_raw()（表示用のエンティティ変換をしない）
- * - wp_head に出力
- */
 $home_url = esc_url_raw(home_url('/'));
+$page_url = esc_url_raw(get_permalink());
 
-$logo_url = esc_url_raw(get_theme_file_uri('/img/ikkatu/logo.png'));
-$mv_url   = esc_url_raw(get_theme_file_uri('/img/ikkatu/mv.jpg'));
+// 画像URL（先頭スラッシュは付けない方が事故りにくい）
+$logo_url = esc_url_raw(get_theme_file_uri('img/ikkatu/logo.png'));
+$mv_url   = esc_url_raw(get_theme_file_uri('img/ikkatu/mv.jpg'));
 
-$ld_json = [
-  '@context'   => 'https://schema.org',
-  '@type'      => 'LocalBusiness',
-  '@id'        => $home_url . '#localbusiness',
+// 住所（フッター表記に合わせる）
+$address = [
+  '@type'           => 'PostalAddress',
+  'postalCode'      => '461-0004',
+  'addressRegion'   => '愛知県',
+  'addressLocality' => '名古屋市東区',
+  'streetAddress'   => '葵3-3-8 SLX葵ビル4F 404',
+  'addressCountry'  => 'JP',
+];
+
+// WebSite
+$website = [
+  '@type'       => 'WebSite',
+  '@id'         => $home_url . '#website',
+  'url'         => $home_url,
+  'name'        => '株式会社QUORIX',
+  'inLanguage'  => 'ja-JP',
+];
+
+// 代表画像
+$primary_image = [
+  '@type' => 'ImageObject',
+  '@id'   => $page_url . '#primaryimage',
+  'url'   => $mv_url,
+];
+
+// 運営者（仲介/紹介サービスの提供者）
+$organization = [
+  '@type'      => ['Organization', 'LocalBusiness'],
+  '@id'        => $home_url . '#organization',
   'name'       => '株式会社QUORIX',
   'url'        => $home_url,
-  'telephone'  => '+81-52-932-5450',
   'logo'       => $logo_url,
-  'image'      => [$mv_url],
-  'address'    => [
-    '@type'           => 'PostalAddress',
-    'postalCode'      => '461-0002',
-    'addressRegion'   => '愛知県',
-    'addressLocality' => '名古屋市東区',
-    'streetAddress'   => '3-3-8 SLX葵ビル4F 404',
+  // ページに電話番号を明確に表示している場合のみ残す（表示してないなら削除）
+  'telephone'  => '+81-52-932-5450',
+  'address'    => $address,
+  'contactPoint' => [[
+    '@type'       => 'ContactPoint',
+    'contactType' => 'customer support',
+    'telephone'   => '+81-52-932-5450',
+    'availableLanguage' => ['ja'],
+  ]],
+];
+
+// サービス（このLPの主題）
+$service = [
+  '@type' => 'Service',
+  '@id'   => $page_url . '#service',
+  'name'  => 'エアコン修理・クリーニングの一括見積り',
+  'serviceType' => 'エアコン修理・エアコンクリーニングの一括見積り（業者紹介）',
+  'provider' => ['@id' => $home_url . '#organization'],
+  'areaServed' => [
+    ['@type' => 'AdministrativeArea', 'name' => '愛知県'],
+    ['@type' => 'AdministrativeArea', 'name' => '岐阜県'],
+    ['@type' => 'AdministrativeArea', 'name' => '三重県'],
+    // 実際に対応しているなら残す。Tokai3県のみなら削除
+    ['@type' => 'AdministrativeArea', 'name' => '静岡県'],
   ],
-  'areaServed' => ['愛知県', '岐阜県', '三重県', '静岡県'],
+];
+
+// WebPage（LP）
+$webpage = [
+  '@type' => 'WebPage',
+  '@id'   => $page_url . '#webpage',
+  'url'   => $page_url,
+  'name'  => 'エアコン 一括見積り｜東海エアコン見積ナビ（株式会社QUORIX）',
+  'inLanguage' => 'ja-JP',
+  'isPartOf' => ['@id' => $home_url . '#website'],
+  'primaryImageOfPage' => ['@id' => $page_url . '#primaryimage'],
+  'about' => ['@id' => $page_url . '#service'],
+  'mainEntity' => ['@id' => $page_url . '#service'],
+  // 主要CV導線（フォーム）へのアクション
+  'potentialAction' => [[
+    '@type' => 'CommunicateAction',
+    'name'  => '無料一括見積りを依頼する',
+    'target' => [[
+      '@type' => 'EntryPoint',
+      'urlTemplate' => $page_url . '#contact',
+      'actionPlatform' => [
+        'http://schema.org/DesktopWebPlatform',
+        'http://schema.org/MobileWebPlatform'
+      ],
+    ]],
+  ]],
+];
+
+// FAQ（表示されているQ&Aのみ。表示制限がある点は理解した上で）
+$faqpage = [
+  '@type' => 'FAQPage',
+  '@id'   => $page_url . '#faq',
+  'mainEntity' => [
+    [
+      '@type' => 'Question',
+      'name'  => '一括見積りをするのに費用はかかりますか？',
+      'acceptedAnswer' => [
+        '@type' => 'Answer',
+        'text'  => '一括見積り依頼や、登録企業からの返信には一切費用はかかりません。',
+      ],
+    ],
+    [
+      '@type' => 'Question',
+      'name'  => 'どのくらいの見積りが届きますか？',
+      'acceptedAnswer' => [
+        '@type' => 'Answer',
+        'text'  => '一回の見積り依頼に対し最大5社から返信がございます。',
+      ],
+    ],
+    [
+      '@type' => 'Question',
+      'name'  => '見積りが届いた後は、どうすればいいですか？',
+      'acceptedAnswer' => [
+        '@type' => 'Answer',
+        'text'  => '各社から見積りが届きましたら、「サービス」「価格」など比較・検討して頂きお取引する会社と直接やり取りを行って下さい。',
+      ],
+    ],
+    [
+      '@type' => 'Question',
+      'name'  => '申し込みから最短何日後の工事が可能ですか？',
+      'acceptedAnswer' => [
+        '@type' => 'Answer',
+        'text'  => '最短で翌日の工事からお申し込み頂けます。ただし時期や地域によってはご希望を承りかねる場合がございます。',
+      ],
+    ],
+    [
+      '@type' => 'Question',
+      'name'  => 'エアコン工事の所要時間はどのくらいですか?',
+      'acceptedAnswer' => [
+        '@type' => 'Answer',
+        'text'  => '取り付け工事は1台あたり約1時間30分、取り外し工事は約30分です。設置状況や種類により変動します。',
+      ],
+    ],
+  ],
+];
+
+$ld_json = [
+  '@context' => 'https://schema.org',
+  '@graph'   => [
+    $website,
+    $primary_image,
+    $organization,
+    $service,
+    $webpage,
+    $faqpage,
+  ],
 ];
 
 add_action('wp_head', static function () use ($ld_json) {
@@ -42,6 +165,7 @@ add_action('wp_head', static function () use ($ld_json) {
 
 get_header();
 ?>
+
 
 
 <header class="header">
@@ -60,8 +184,8 @@ get_header();
           <h1>
             <picture>
               <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/logo.avif" type="image/avif">
-              <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/img/logo.webp" type="image/webp">
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/img/logo.png"
+              <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/logo.webp" type="image/webp">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/logo.png"
                 alt="東海エアコン見積ナビ"
                 width="414" height="62"
                 fetchpriority="high"
