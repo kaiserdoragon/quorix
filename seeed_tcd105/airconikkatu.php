@@ -44,7 +44,6 @@ $organization = [
   'name'       => '株式会社QUORIX',
   'url'        => $home_url,
   'logo'       => $logo_url,
-  // ページに電話番号を明確に表示している場合のみ残す（表示してないなら削除）
   'telephone'  => '+81-52-932-5450',
   'address'    => $address,
   'contactPoint' => [[
@@ -66,7 +65,6 @@ $service = [
     ['@type' => 'AdministrativeArea', 'name' => '愛知県'],
     ['@type' => 'AdministrativeArea', 'name' => '岐阜県'],
     ['@type' => 'AdministrativeArea', 'name' => '三重県'],
-    // 実際に対応しているなら残す。Tokai3県のみなら削除
     ['@type' => 'AdministrativeArea', 'name' => '静岡県'],
   ],
 ];
@@ -534,21 +532,7 @@ get_header();
             <img class="is-hidden_sp" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/use_05.jpg" alt="" width="250" height="250" decoding="async">
           </div>
         </li>
-        <li>
-          <div class="use--txt">
-            <h3>お支払い</h3>
-            <img class="is-hidden_pc" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/use_06.jpg" alt="" width="250" height="250" decoding="async">
-            <p>お支払い方法は現金・銀行振込・クレジットカードがご利用いただけます。 <br>
-              銀行振込をご利用の場合の振込先はお見積りの際にご案内いたします。</p>
-          </div>
-          <div>
-            <img class="is-hidden_sp" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/use_06.jpg" alt="" width="250" height="250" decoding="async">
-          </div>
-        </li>
       </ol>
-      <b>業者が確定したら、ご指定いただいた日時に作業を行います。<br>
-        作業が完了しましたら、請求金額を作業員へお渡しください。</b>
-      <span>※業者によってはクレジットカードや請求書払いに対応しているところもあります。<br>現金払い以外でのお支払いをご希望の方は、お見積りの際にお伝えください。</span>
     </div>
   </section>
 
