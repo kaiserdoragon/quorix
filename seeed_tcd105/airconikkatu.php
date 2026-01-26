@@ -234,7 +234,7 @@ get_header();
         <dl>
           <dt>愛知県・岐阜県・三重県・岐阜県対応</dt>
           <dd>優良業者のみをご紹介</dd>
-          <dd>家庭用から業務用まで<br>エアコンの修理・クリーニングのお見積り！</dd>
+          <dd>家庭用から業務用まで<br>エアコンの取り付けまでのお見積り！</dd>
         </dl>
         <img src="<?php echo get_template_directory_uri(); ?>/img/ikkatu/mv_txt_01.png" alt="エアコンのトラブルを" width="609" height="88">
         <strong>最短当日対応の<span>一括見積り</span>で解決!!</strong>
@@ -402,7 +402,6 @@ get_header();
           <ul>
             <li>どこに頼めばいいか分からない</li>
             <li>費用やスケジュールだけ知りたい</li>
-            <li>修理だけお願いしたい</li>
             <li>費用が安いところを探している</li>
           </ul>
           <b>まずは一度ご相談ください。</b>
@@ -436,7 +435,7 @@ get_header();
             <h3>オフィスの空気が一気に軽くなりました</h3>
             <span>名古屋市　IT企業　A様</span>
           </div>
-          <p>クリーニング後は同じ設定温度でもムラなく冷え、
+          <p>同じ設定温度でもムラなく冷え、
             会議室のこもったニオイも解消。<br>
             社員から「空気が変わった」と好評で、
             来客対応にも自信が持てるようになりました。</p>
@@ -458,9 +457,8 @@ get_header();
             <h3>「清潔感が増した」と評判です</h3>
             <span>四日市市　クリニック　T様</span>
           </div>
-          <p>天井カセットを分解洗浄してもらったところ、
-            見えない内部の汚れに驚きました。<br>
-            クリーニング後は空気がすっきりし、
+          <p>
+            新しいエアコンの取り換え後は空気がすっきりし、
             患者様やスタッフからも好印象の声が
             増えています。</p>
         </div>
@@ -477,8 +475,7 @@ get_header();
           <div class="use--txt">
             <h3>お問い合わせ</h3>
             <img class="is-hidden_pc" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/use_01.jpg" alt="" width="250" height="250" decoding="async">
-            <p>サービスの詳細、気になっている汚れやお掃除したい箇所についてなど、
-              お電話またはメールフォームにてお気軽にお問い合わせください。</p>
+            <p>サービスの詳細についてお電話またはメールフォームにてお気軽にお問い合わせください。</p>
           </div>
           <div>
             <img class="is-hidden_sp" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/use_01.jpg" alt="" width="250" height="250" decoding="async">
@@ -490,8 +487,7 @@ get_header();
             <img class="is-hidden_pc" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/use_02.jpg" alt="" width="250" height="250" decoding="async">
             <p>
               お見積り訪問日時などを相談させていただきます。<br>
-              ご希望のサービス内容を詳しくお伺いし、お掃除・お手伝いする
-              箇所の確認をいたします。
+              ご希望のサービス内容を詳しくお伺いします。
             </p>
           </div>
           <div>
@@ -503,9 +499,8 @@ get_header();
             <h3>お見積りご提示</h3>
             <img class="is-hidden_pc" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/use_03.jpg" alt="" width="250" height="250" decoding="async">
             <p>
-              担当スタッフが訪問し、お掃除対象箇所を確認後無料でお見積りを
-              ご提示します。<br>
-              お掃除の際の注意事項などもご説明します。
+              担当スタッフが訪問し、確認後無料でお見積りをご提示します。<br>
+              注意事項などもご説明します。
             </p>
           </div>
           <div>
@@ -630,7 +625,7 @@ get_header();
           <dd>
             取り付け工事の所要時間はエアコン1台あたり1時間30分ほどです。<br>
             また取り外し工事の所要時間はエアコン1台あたり約30分です。<br>
-            設置状況やお持ちのエアコンの種類によってはそれ以上お時間を頂く場合がございます。<br>
+            設置状況によってはそれ以上お時間を頂く場合がございます。<br>
             あらかじめご了承ください。
           </dd>
         </div>
