@@ -88,19 +88,6 @@ get_header();
         お問い合わせ頂き誠にありがとうございます。<br>
         お送り頂きました内容を確認の上、最短で折り返しご連絡させて頂きます。<br>
       </p>
-      <div class="thanks--tel">
-        <a href="tel:052-932-5450" class="cv_button">
-          <picture>
-            <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/tel.avif" type="image/avif">
-            <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/img/tel.webp" type="image/webp">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/ikkatu/img/tel.png"
-              alt="お電話でのご相談はこちら: 052-932-5450"
-              width="355" height="90"
-              decoding="async">
-          </picture>
-        </a>
-      </div>
-
       <a class="thanks--back" href="<?php echo esc_url(home_url('/ikkatu/')); ?>">ページのTOPに戻る</a>
     </div>
   </section>
